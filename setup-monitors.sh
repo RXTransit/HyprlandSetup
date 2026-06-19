@@ -66,7 +66,7 @@ pick_mode() {
   echo "${seen[$((choice-1))]}"
 }
 
-pick_refresh() {
+pick_ref() {
   local default="$1"
   local rates=(60 75 90 100 120 144 165 240)
 
