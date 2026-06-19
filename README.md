@@ -11,13 +11,21 @@ Background is [river-city.jpg](https://github.com/orangci/walls-catppuccin-mocha
 ./install.sh --deps
 ```
 
-### 2. Configure monitors (optional)
+### 2. Configure monitors
+
+The configs use `HDMI-A-1` and `HDMI-A-2` by default. Get your monitor names:
+
+```bash
+hyprctl monitors
+```
+
+Then replace the connector names in `.config/hypr/hyprland.conf`, `.config/hypr/hyprpaper.conf`, and `etc/greetd/hyprland.conf`. (`etc/hyprpaper/hyprpaper.conf` is for the greeter only.) '.config/hypr/hyprpaper.conf'
+
+Or run the interactive script (auto-detects and updates all three files):
 
 ```bash
 ./setup-monitors.sh
 ```
-
-This detects connected displays and updates `hyprland.conf`, `hyprpaper.conf`, and `greetd/hyprland.conf` with your chosen layout.
 
 ### 3. Copy configs
 

@@ -166,45 +166,23 @@ generate_hyprland_conf() {
   conf="${conf//HDMI-A-1/$secondary_conn}"
 }
 
-generate_hyprpaper_conf() {
-  local -n mons="$1" conf="$2"
+replace_connectors() {
+  local -n mons="$1"
+  local -n content="$2"
   local layout="$3"
+  local template="$4"
 
-  conf=""
+  content=$(<"$template")
 
   if [[ "$layout" == single:* ]]; then
     local conn="${layout#single:}"
-    conf+="preload = /usr/share/backgrounds/river-city.jpg\n"
-    conf+="wallpaper = $conn,/usr/share/backgrounds/river-city.jpg\n"
-    return
-  fi
-
-  local conns=()
-  for m in "${mons[@]}"; do
-    conns+=("${m%%|*}")
-  done
-
-  conf+="preload = /usr/share/backgrounds/river-city.jpg\n"
-  for c in "${conns[@]}"; do
-    conf+="wallpaper = $c,/usr/share/backgrounds/river-city.jpg\n"
-  done
-}
-
-generate_greetd_hyprland_conf() {
-  local -n mons="$1" conf="$2"
-  local layout="$3"
-
-  conf=$(<"$REPO_DIR/etc/greetd/hyprland.conf")
-
-  if [[ "$layout" == single:* ]]; then
-    local conn="${layout#single:}"
-    conf="${conf//HDMI-A-2/$conn}"
-    conf="${conf//HDMI-A-1/$conn}"
+    content="${content//HDMI-A-2/$conn}"
+    content="${content//HDMI-A-1/$conn}"
   else
     local primary_conn="${mons[0]%%|*}"
     local secondary_conn="${mons[1]%%|*}"
-    conf="${conf//HDMI-A-2/$primary_conn}"
-    conf="${conf//HDMI-A-1/$secondary_conn}"
+    content="${content//HDMI-A-2/$primary_conn}"
+    content="${content//HDMI-A-1/$secondary_conn}"
   fi
 }
 
@@ -261,26 +239,27 @@ main() {
     updated_monitors+=("$conn|${chosen_res[$conn]}@${chosen_ref[$conn]}")
   done
 
-  local hypr_conf hyprpaper_conf greetd_conf
+  local hypr_conf hyprpaper_user_conf hyprpaper_greetd_conf greetd_conf
 
   echo ""
   echo "Generating configs..."
 
   generate_hyprland_conf updated_monitors hypr_conf "$layout"
-  generate_hyprpaper_conf updated_monitors hyprpaper_conf "$layout"
-  generate_greetd_hyprland_conf updated_monitors greetd_conf "$layout"
+  replace_connectors updated_monitors hyprpaper_user_conf "$layout" "$REPO_DIR/.config/hypr/hyprpaper.conf"
+  replace_connectors updated_monitors hyprpaper_greetd_conf "$layout" "$REPO_DIR/etc/hyprpaper/hyprpaper.conf"
+  replace_connectors updated_monitors greetd_conf "$layout" "$REPO_DIR/etc/greetd/hyprland.conf"
 
   printf "%b\n" "$hypr_conf" > "$REPO_DIR/.config/hypr/hyprland.conf"
-  printf "%b\n" "$hyprpaper_conf" > "$REPO_DIR/etc/hyprpaper/hyprpaper.conf"
+  printf "%b\n" "$hyprpaper_user_conf" > "$REPO_DIR/.config/hypr/hyprpaper.conf"
+  printf "%b\n" "$hyprpaper_greetd_conf" > "$REPO_DIR/etc/hyprpaper/hyprpaper.conf"
   printf "%b\n" "$greetd_conf" > "$REPO_DIR/etc/greetd/hyprland.conf"
 
   echo ""
   echo "Updated:"
   echo "  .config/hypr/hyprland.conf"
-  echo "  etc/hyprpaper/hyprpaper.conf"
+  echo "  .config/hypr/hyprpaper.conf"
+  echo "  etc/hyprpaper/hyprpaper.conf (greeter)"
   echo "  etc/greetd/hyprland.conf"
-  echo ""
-  echo "Run ./install.sh --configs --system to apply them."
 }
 
 main "$@"
