@@ -34,10 +34,6 @@ Or run the interactive script (auto-detects and updates all three files):
 cp -r .config/hypr ~/.config/hypr
 cp -r .config/waybar ~/.config/waybar
 
-# Icons, themes, cursors
-cp -r usr/share/icons/* ~/.local/share/icons/
-cp -r usr/share/themes/* ~/.local/share/themes/
-
 # Background (system-wide)
 sudo cp -r usr/share/backgrounds /usr/share/
 
