@@ -2,7 +2,18 @@
 set -euo pipefail
 
 REPO_DIR="$(cd "$(dirname "$0")" && pwd)"
-BACKUP_DIR="$HOME/.config/hyprland-setup-backup-$(date +%Y%m%d-%H%M%S)"
+
+REAL_USER="${SUDO_USER:-$USER}"
+REAL_HOME="$(eval echo "~$REAL_USER")"
+
+run_as_user() {
+  if [[ "$EUID" -eq 0 && -n "$SUDO_USER" ]]; then
+    sudo -u "$REAL_USER" "$@"
+  else
+    "$@"
+  fi
+}
+BACKUP_DIR="$REAL_HOME/.config/hyprland-setup-backup-$(date +%Y%m%d-%H%M%S)"
 
 PACKAGES=(
   hyprland hyprlock hypridle hyprpaper waybar
@@ -67,7 +78,7 @@ copy_config() {
 install_bundled_assets() {
   local dir dest
   for dir in "$REPO_DIR/usr/share/"*/; do
-    dest="$HOME/.local/share/$(basename "$dir")"
+    dest="$REAL_HOME/.local/share/$(basename "$dir")"
     mkdir -p "$dest"
     for item in "$dir"*/; do
       local name
@@ -85,9 +96,9 @@ install_bundled_assets() {
 install_user_configs() {
   echo ":: Installing user configs..."
 
-  copy_config "$REPO_DIR/.config/hypr" "$HOME/.config/hypr"
-  copy_config "$REPO_DIR/.config/waybar" "$HOME/.config/waybar"
-  install_bundled_assets
+  run_as_user copy_config "$REPO_DIR/.config/hypr" "$REAL_HOME/.config/hypr"
+  run_as_user copy_config "$REPO_DIR/.config/waybar" "$REAL_HOME/.config/waybar"
+  run_as_user install_bundled_assets
 }
 
 install_system_files() {
