@@ -12,8 +12,7 @@ PACKAGES=(
   otf-commit-mono-nerd
   greetd-regreet greetd
   polkit-gnome gnome-keyring
-  openrgb libnotify
-  discord steam
+  libnotify
 )
 
 AUR_PACKAGES=(
