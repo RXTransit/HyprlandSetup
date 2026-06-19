@@ -53,19 +53,15 @@ install_aur_pkgs() {
   fi
 }
 
-link_config() {
+copy_config() {
   local src="$1" dest="$2"
-  if [[ -e "$dest" && ! -L "$dest" ]]; then
+  if [[ -e "$dest" ]]; then
     echo "   Backing up $dest -> $BACKUP_DIR/"
-    mkdir -p "$BACKUP_DIR"
+    mkdir -p "$BACKUP_DIR/$(dirname "$dest")"
     mv "$dest" "$BACKUP_DIR/"
   fi
-  if [[ -L "$dest" ]]; then
-    echo "   Removing existing symlink: $dest"
-    rm -f "$dest"
-  fi
-  echo "   Linking $src -> $dest"
-  ln -sf "$src" "$dest"
+  echo "   Copying $src -> $dest"
+  cp -r "$src" "$dest"
 }
 
 install_bundled_assets() {
@@ -89,8 +85,8 @@ install_bundled_assets() {
 install_user_configs() {
   echo ":: Installing user configs..."
 
-  link_config "$REPO_DIR/.config/hypr" "$HOME/.config/hypr"
-  link_config "$REPO_DIR/.config/waybar" "$HOME/.config/waybar"
+  copy_config "$REPO_DIR/.config/hypr" "$HOME/.config/hypr"
+  copy_config "$REPO_DIR/.config/waybar" "$HOME/.config/waybar"
   install_bundled_assets
 }
 
@@ -142,7 +138,7 @@ Usage: $0 [options]
 Options:
   --all           Install everything (default)
   --deps          Install packages only
-  --configs       Link configs only
+  --configs       Copy configs only
   --system        Install system files (backgrounds, greetd)
   --monitors      Interactive monitor configuration
   --services      Enable systemd services
