@@ -66,6 +66,7 @@ install_aur_pkgs() {
 
 copy_config() {
   local src="$1" dest="$2"
+  mkdir -p "$(dirname "$dest")"
   if [[ -e "$dest" ]]; then
     echo "   Backing up $dest -> $BACKUP_DIR/"
     mkdir -p "$BACKUP_DIR/$(dirname "$dest")"
