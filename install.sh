@@ -10,7 +10,7 @@ PACKAGES=(
   wireplumber pipewire pipewire-pulse
   bluez-utils brightnessctl fzf networkmanager pacman-contrib
   otf-commit-mono-nerd
-  greetd regreet
+  greetd-regreet greetd
   polkit-gnome gnome-keyring
   openrgb libnotify
   discord steam
