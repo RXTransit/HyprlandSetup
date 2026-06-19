@@ -106,7 +106,7 @@ arrange_monitors() {
   local count="${#mons[@]}"
 
   if ((count == 1)); then
-    echo "single"
+    echo "single:${mons[0]%%|*}"
     return
   fi
 
