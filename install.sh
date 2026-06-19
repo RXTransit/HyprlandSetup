@@ -78,6 +78,7 @@ copy_config() {
 
 install_bundled_assets() {
   local dir dest
+  shopt -s nullglob
   for dir in "$REPO_DIR/usr/share/"*/; do
     dest="$REAL_HOME/.local/share/$(basename "$dir")"
     mkdir -p "$dest"
@@ -92,6 +93,7 @@ install_bundled_assets() {
       fi
     done
   done
+  shopt -u nullglob
 }
 
 install_user_configs() {
