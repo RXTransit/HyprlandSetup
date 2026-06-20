@@ -1,51 +1,23 @@
-# Hyprland Dotfiles
+copy greetd/ to /etc/
 
-Waybar is a fork of [mechabar](https://github.com/sejjy/mechabar.git).
-Background is [river-city.jpg](https://github.com/orangci/walls-catppuccin-mocha.git).
+copy hyprpaper/ to /etc/
+ 
+copy color-schemes/ to /usr/share/ or ~/.local/share/
 
-## Setup
+copy folders qt5ct/ & qt6ct/ to ~/.config/
 
-### 1. Install dependencies
+copy icons/ to /usr/share or ~/.local/share
 
-```bash
-./install.sh --deps
-```
+copy themes/ to /usr/share or ~/.local/share
 
-### 2. Configure monitors
+copy river-city.jpg to /usr/share/backgrounds | mkdir -p /usr/share/backgrounds first
 
-The configs use `HDMI-A-1` and `HDMI-A-2` by default. Get your monitor names:
+copy waybar/ to ~/.config/
 
-```bash
-hyprctl monitors
-```
+copy hypr/ to ~/.config/
 
-Then replace the connector names in `.config/hypr/hyprland.conf`, `.config/hypr/hyprpaper.conf`, and `etc/greetd/hyprland.conf`. (`etc/hyprpaper/hyprpaper.conf` is for the greeter only.) '.config/hypr/hyprpaper.conf'
 
-Or run the interactive script (auto-detects and updates all three files):
+Dependencies - 
 
-```bash
-./setup-monitors.sh
-```
+hyprpaper waybar rofi bluetui nmtui hyprshot hyprlock grim slurp greetd-regreet greetd
 
-### 3. Copy configs
-
-```bash
-# Hyprland + Waybar
-cp -r .config/hypr ~/.config/hypr
-cp -r .config/waybar ~/.config/waybar
-
-# Background (system-wide)
-sudo cp -r usr/share/backgrounds /usr/share/
-
-# Greetd (display manager)
-sudo cp -r etc/greetd /etc/
-
-# Hyprpaper (greeter wallpaper)
-sudo cp -r etc/hyprpaper /etc/
-```
-
-### 4. Enable services
-
-```bash
-./install.sh --services
-```
