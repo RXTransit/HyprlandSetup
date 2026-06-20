@@ -19,5 +19,5 @@ copy hypr/ to ~/.config/
 
 Dependencies - 
 
-hyprpaper waybar rofi bluetui nmtui hyprshot hyprlock grim slurp greetd-regreet greetd
+hyprpaper waybar rofi bluetui nmtui hyprshot hyprlock grim slurp greetd-regreet greetd wiremix
 
