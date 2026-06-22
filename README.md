@@ -51,7 +51,7 @@ systemctl --user restart pipewire pipewire-pulse wireplumber
 
 - Only tested on **Arch Linux**, btw.
 - Works well in `uwsm` managed session.
-- `XF86AudioRaiseVolume` / `XF86AudioLowerVolume` keybinds only apply if you have a **Corsair K70 RGB Core** keyboard with **OpenLinkHub** installed.
+- `XF86AudioRaiseVolume` / `XF86AudioLowerVolume` keybinds only work if you have a **Corsair K70 RGB Core** keyboard with **OpenLinkHub** installed. (ID 1b1c:1bfd Corsair CORSAIR K70 CORE RGB Mechanical Gaming Keyboard)
 
 ## Keybindings
 
