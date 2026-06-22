@@ -16,6 +16,7 @@
                 "9": "9",
                 "10": "10"
 		},
+		// "Change this accordingly to have the workspace numbers on waybar to stay on the monitors you want, below is an example for a dual screen setup where monitor 1 has Workspaces 1 -5, and monitor 2  has workspaces 6 - 10."
 		"persistent-workspaces": {
 	        "HDMI-A-1": [6, 7, 8, 9, 10],
                 "HDMI-A-2": [1, 2, 3, 4, 5]
