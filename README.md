@@ -23,6 +23,7 @@ Comes with a default wallpaper managed by `swaybg`. The script at `~/.local/shar
 ## Configuration
 
 - Edit `.config/hypr/hyprland.conf` to match your monitor names.
+- Edit `.config/waybar/modules/hyprland/workspaces.jsonc` and change the monitor names under `"persistent-workspaces"` for persistent workspace icons on the correct displays.
 - Remove autostart entries for programs you don't use.
 - Edit the lock screen background in `.config/hypr/hyprlock.conf`.
 
