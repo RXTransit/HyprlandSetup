@@ -3,8 +3,8 @@ set -euo pipefail
 
 packages=(
   hyprland hypridle hyprpicker hyprshot hyprlock hyprshutdown
-  waybar rofi bluetui nmtui grim slurp
-  swaybg swaync wiremix bluez-utilz brightnessctl
+  waybar rofi bluetui grim slurp
+  swaybg swaync wiremix brightnessctl
   fzf networkmanager pacman-contrib otf-commit-mono-nerd uwsm cliphist
   wl-clipboard qt5ct qt6ct dolphin konsole kitty
 )
