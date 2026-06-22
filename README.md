@@ -32,7 +32,7 @@ Comes with a default wallpaper managed by `swaybg`. The script at `~/.local/shar
 hyprland hypridle hyprpicker waybar rofi bluetui nmtui hyprshot hyprlock grim slurp
 wiremix hyprshutdown swaybg swaync bluez-utils brightnessctl
 fzf networkmanager pacman-contrib otf-commit-mono-nerd uwsm cliphist
-wl-clipboard qt5ct qt6ct dolphin konsole kitty
+wl-clipboard qt5ct qt6ct dolphin konsole kitty breeze breeze5 nwg-look gnome-keyring polkit polkit-kde-agent
 ```
 
 ## Display Manager
