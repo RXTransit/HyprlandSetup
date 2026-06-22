@@ -7,7 +7,7 @@ change the monitor names accordingly in .config/hypr/hyprland.conf   and remove 
 
 Dependencies - 
 
-hyprpaper waybar rofi bluetui nmtui hyprshot hyprlock grim slurp wiremix hyprshutdown swaybg swaync hypridle bluez-utilz brightnessctl  ffzf networkmanager pacman-contrib otf-commit-mono-nerd uwsm cliphist wl-clipboard qt5ct qt6ct
+hyprpaper waybar rofi bluetui nmtui hyprshot hyprlock grim slurp wiremix hyprshutdown swaybg swaync hypridle bluez-utilz brightnessctl fzf networkmanager pacman-contrib otf-commit-mono-nerd uwsm cliphist wl-clipboard qt5ct qt6ct dolphin konsole kitty
 
 Works best with SDDM Login Manager
 
