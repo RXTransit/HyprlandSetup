@@ -40,6 +40,12 @@ wl-clipboard qt5ct qt6ct-kde dolphin konsole kitty breeze breeze5 nwg-look gnome
 
 Works best with **SDDM** login manager.
 
+Bundled in this repo is my /etc/sddm & /usr/share/sddm folder 
+
+edit the Xsetup script (which is in usr/share/sddm/scripts) to configure monitor orientation correctly for SDDM
+
+Since X11 and Wayland use different connector names, please boot into an X11 desktop and run xrandr 
+
 ## Audio
 
 If audio icons don't appear in waybar, install `pipewire`, `pipewire-pulse`, and `wireplumber`, then run:
