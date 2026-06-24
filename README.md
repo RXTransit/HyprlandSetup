@@ -84,3 +84,8 @@ systemctl --user restart pipewire pipewire-pulse wireplumber
 | Super + Print | Screenshot window |
 | XF86AudioRaiseVolume | Raise volume |
 | XF86AudioLowerVolume | Lower volume |
+
+
+##PS
+
+If anyone could figure out how to transfer this to NixOs, much appreciated!
