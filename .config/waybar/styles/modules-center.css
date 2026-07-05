@@ -83,6 +83,10 @@
 	padding: 0 6px;
 	background-color: @time;
 }
+#clock.wv-time {
+	padding: 0 6px;
+	background-color: @time;
+}
 #custom-right_div.3 {
 	background-color: @date;
 	color: @time;

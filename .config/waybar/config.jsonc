@@ -33,10 +33,11 @@
 		"idle_inhibitor",
 		"clock#time",
 		"clock#la-time",
+		"clock#wv-time",
 		"custom/right_div#3",
 		"clock#date",
 		"custom/right_div#4",
-		"network",
+		//"network",
 		"bluetooth",
 		"custom/update",
 		"custom/right_div#5"
@@ -63,7 +64,7 @@
 	// "expand-right":
 	"layer": "top",
 	// "output":
-	// "position":
+	"position":"top",
 	"height": 0,
 	"width": 0,
 	"margin": 0,

@@ -8,4 +8,6 @@
 #mpvpaper -o "loop-file" OUTPUT OUTPUT /path/to/video &
 #mpvpaper -o "loop-file" OUTPUT /path/to/video
 
+#hyprpaper -c ~/.config/hypr/hyprpaper.conf
+
 #afterwards reload with meta + w
