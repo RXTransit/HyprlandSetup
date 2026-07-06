@@ -27,13 +27,13 @@ Comes with a default wallpaper managed by `swaybg`. The script at `~/.local/shar
 - Remove autostart entries for programs you don't use.
 - Edit the lock screen background in `.config/hypr/hyprlock.conf`.
 
-## Dependencies
+## Dependencies for ARCH
 
 ```
 hyprland hypridle hyprpicker waybar rofi bluetui nmtui hyprshot hyprlock grim slurp
 wiremix hyprshutdown swaybg swaync bluez-utils brightnessctl
 fzf networkmanager pacman-contrib otf-commit-mono-nerd uwsm cliphist
-wl-clipboard qt5ct qt6ct-kde dolphin konsole kitty breeze breeze5 nwg-look gnome-keyring polkit polkit-kde-agent mpvpaper
+wl-clipboard qt5ct qt6ct kitty breeze breeze5 nwg-look gnome-keyring polkit polkit-kde-agent mpvpaper
 ```
 
 ## Display Manager
