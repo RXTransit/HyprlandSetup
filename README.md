@@ -27,10 +27,9 @@ that's what I used lol
 ## Dependencies for ARCH
 
 ```
-hyprland hypridle hyprpicker bluetui nmtui hyprshot hyprlock grim slurp
-wiremix hyprshutdown swaync bluez-utils brightnessctl
-fzf networkmanager pacman-contrib otf-commit-mono-nerd uwsm cliphist rofi
-wl-clipboard qt5ct qt6ct kitty breeze breeze5 nwg-look gnome-keyring polkit hyprpolkitagent kvantum noctalia noctalia-shell
+hyprland hypridle hyprpicker hyprshot hyprlock grim slurp
+hyprshutdown bluez-utils uwsm cliphist rofi
+wl-clipboard qt5ct qt6ct kitty breeze breeze5 nwg-look gnome-keyring polkit hyprpolkitagent kvantum noctalia noctalia-shell hypremoji
 ```
 
 ## Display Manager
