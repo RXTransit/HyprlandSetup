@@ -11,6 +11,8 @@ Copy the `.config`, `.local`, and other dotfolders into your home directory:
 ```bash
 cp -r .config ~/
 cp -r .local ~/
+
+either move the lua or the hyprlang configs out of their respective folders and put them directly into ~/.config/hypr/
 ```
 
 ## Wallpaper
