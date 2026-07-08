@@ -14,11 +14,8 @@ cp -r .local ~/
 ```
 
 ## Wallpaper
-
-Comes with a default wallpaper managed by `swaybg/mpvpaper/hyprpaper`. The script at `~/.local/share/scripts/multimonwallpapers.sh` controls wallpaper placement across multiple monitors.
-
-- Edit the script to change wallpaper paths.
-- Reload wallpapers with **Meta + W**.
+Noctalia has a built in wallpaper plugin
+that's what I used lol
 
 ## Configuration
 
@@ -31,9 +28,9 @@ Comes with a default wallpaper managed by `swaybg/mpvpaper/hyprpaper`. The scrip
 
 ```
 hyprland hypridle hyprpicker bluetui nmtui hyprshot hyprlock grim slurp
-wiremix hyprshutdown swaybg swaync bluez-utils brightnessctl
-fzf networkmanager pacman-contrib otf-commit-mono-nerd uwsm cliphist rofi hyprpaper
-wl-clipboard qt5ct qt6ct kitty breeze breeze5 nwg-look gnome-keyring polkit hyprpolkitagent mpvpaper kvantum noctalia noctalia-shell
+wiremix hyprshutdown swaync bluez-utils brightnessctl
+fzf networkmanager pacman-contrib otf-commit-mono-nerd uwsm cliphist rofi
+wl-clipboard qt5ct qt6ct kitty breeze breeze5 nwg-look gnome-keyring polkit hyprpolkitagent kvantum noctalia noctalia-shell
 ```
 
 ## Display Manager
