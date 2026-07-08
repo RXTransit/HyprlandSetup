@@ -15,7 +15,7 @@ cp -r .local ~/
 
 ## Wallpaper
 
-Comes with a default wallpaper managed by `swaybg`. The script at `~/.local/share/scripts/multimonwallpapers.sh` controls wallpaper placement across multiple monitors.
+Comes with a default wallpaper managed by `swaybg/mpvpaper/hyprpaper`. The script at `~/.local/share/scripts/multimonwallpapers.sh` controls wallpaper placement across multiple monitors.
 
 - Edit the script to change wallpaper paths.
 - Reload wallpapers with **Meta + W**.
@@ -30,21 +30,15 @@ Comes with a default wallpaper managed by `swaybg`. The script at `~/.local/shar
 ## Dependencies for ARCH
 
 ```
-hyprland hypridle hyprpicker waybar rofi bluetui nmtui hyprshot hyprlock grim slurp
+hyprland hypridle hyprpicker bluetui nmtui hyprshot hyprlock grim slurp
 wiremix hyprshutdown swaybg swaync bluez-utils brightnessctl
 fzf networkmanager pacman-contrib otf-commit-mono-nerd uwsm cliphist
-wl-clipboard qt5ct qt6ct kitty breeze breeze5 nwg-look gnome-keyring polkit hyprpolkitagent mpvpaper
+wl-clipboard qt5ct qt6ct kitty breeze breeze5 nwg-look gnome-keyring polkit hyprpolkitagent mpvpaper kvantum noctalia noctalia-shell
 ```
 
 ## Display Manager
 
 Works best with **SDDM** login manager.
-
-Bundled in this repo is my /etc/sddm & /usr/share/sddm folder 
-
-edit the Xsetup script (which is in usr/share/sddm/scripts) to configure monitor orientation correctly for SDDM
-
-Since X11 and Wayland use different connector names, please boot into an X11 desktop and run xrandr 
 
 ## Audio
 
@@ -67,9 +61,9 @@ systemctl --user restart pipewire pipewire-pulse wireplumber
 | Super + Q | Launch terminal (kitty) |
 | Super + C | Kill active window |
 | Super + M | Shutdown (hyprshutdown) |
-| Super + E | Open file manager (dolphin) |
+| Super + E | Open file manager (nemo) |
 | Super + V | Clipboard history |
-| Super + R | Launch app menu (rofi) |
+| Super + R | Launch app menu (noctalia) |
 | Super + F | Toggle fullscreen |
 | Super + B | Open browser |
 | Super + W | Reload wallpapers |
