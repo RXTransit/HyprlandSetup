@@ -2,7 +2,7 @@
 
 ![Hyprland Setup](image.png)
 
-My personal Hyprland dotfiles and configuration for Arch Linux.
+My personal Hyprland dotfiles and configuration for Arch Linux. Migrated to LUA programming language
 
 ## Installation
 
@@ -19,10 +19,8 @@ that's what I used lol
 
 ## Configuration
 
-- Edit `.config/hypr/hyprland.conf` to match your monitor names.
-- Edit `.config/waybar/modules/hyprland/workspaces.jsonc` and change the monitor names under `"persistent-workspaces"` for persistent workspace icons on the correct displays.
+- Edit `.config/hypr/hyprland.lua` to match your monitor names.
 - Remove autostart entries for programs you don't use.
-- Edit the lock screen background in `.config/hypr/hyprlock.conf`.
 
 ## Dependencies for ARCH
 
