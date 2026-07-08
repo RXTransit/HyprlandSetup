@@ -32,7 +32,7 @@ Comes with a default wallpaper managed by `swaybg/mpvpaper/hyprpaper`. The scrip
 ```
 hyprland hypridle hyprpicker bluetui nmtui hyprshot hyprlock grim slurp
 wiremix hyprshutdown swaybg swaync bluez-utils brightnessctl
-fzf networkmanager pacman-contrib otf-commit-mono-nerd uwsm cliphist
+fzf networkmanager pacman-contrib otf-commit-mono-nerd uwsm cliphist rofi hyprpaper
 wl-clipboard qt5ct qt6ct kitty breeze breeze5 nwg-look gnome-keyring polkit hyprpolkitagent mpvpaper kvantum noctalia noctalia-shell
 ```
 
