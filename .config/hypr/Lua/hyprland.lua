@@ -53,7 +53,6 @@ hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("cliphist list | rofi -dmenu -display
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser .. " --new-window"))
-hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("/bin/bash -c 'pkill swaybg; pkill mpvpaper; pkill hyprpaper; ~/.local/share/scripts/multimonwallpapers.sh'"))
 hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("hyprpicker -a -n"))
 hl.bind(mainMod .. " + X", hl.dsp.window.float({ action = "toggle" }))
 
@@ -158,20 +157,16 @@ hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume --limit 1.0 @D
 hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("noctalia msg session-lock"))
 
--- Source: ~/.config/hypremoji/hypremoji.conf — convert this file to Lua and ensure it is on Lua's package.path.
+--Source: ~./.config/hypremoji/hypremoji.lua— convert this file to Lua and ensure it is on Lua's package.path.
 require("hypremoji")
 
 -- Source: ~/.config/hypr/noctalia.conf — convert this file to Lua and ensure it is on Lua's package.path.
-require("noctalia")
+require("noctalia").apply_theme()
 hl.config({
     general = {
         gaps_in = 5,
         gaps_out = 10,
         border_size = 3,
-        col = {
-            active_border = "rgb(f7f700)",
-            inactive_border = "rgb(f5e0a0)",
-        },
         resize_on_border = true,
     },
     decoration = {
