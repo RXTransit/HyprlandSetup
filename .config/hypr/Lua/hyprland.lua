@@ -157,7 +157,7 @@ hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume --limit 1.0 @D
 hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("noctalia msg session-lock"))
 
---Source: ~./.config/hypremoji/hypremoji.lua— convert this file to Lua and ensure it is on Lua's package.path.
+--Source: ~./.config/hypr/hypremoji.lua— convert this file to Lua and ensure it is on Lua's package.path.
 require("hypremoji")
 
 -- Source: ~/.config/hypr/noctalia.conf — convert this file to Lua and ensure it is on Lua's package.path.
@@ -211,11 +211,11 @@ hl.config({
 })
 
 hl.on("hyprland.start", function()
-    hl.exec_cmd("openrgb --profile RGB")
-    hl.exec_cmd("noctalia")
-    hl.exec_cmd("wl-paste --type text --watch cliphist store")
-    hl.exec_cmd("wl-paste --type image --watch cliphist store")
-    hl.exec_cmd("uwsm app -- steam")
-    hl.exec_cmd("flatpak run dev.vencord.Vesktop")
+    --hl.exec_cmd("openrgb --profile RGB")
+    --hl.exec_cmd("noctalia")
+    --hl.exec_cmd("wl-paste --type text --watch cliphist store")
+    --hl.exec_cmd("wl-paste --type image --watch cliphist store")
+    --hl.exec_cmd("uwsm app -- steam")
+    --hl.exec_cmd("flatpak run dev.vencord.Vesktop")
 end)
 
