@@ -24,13 +24,20 @@ that's what I used lol
 - Edit `.config/hypr/hyprland.lua` to match your monitor names.
 - Remove autostart entries for programs you don't use.
 
-## Dependencies for ARCH
+## Dependencies for ARCH with CachyOS Repos/CachyOS
 
 ```
-hyprland hypridle hyprpicker hyprshot hyprlock grim slurp
-hyprshutdown bluez-utils uwsm cliphist rofi
-wl-clipboard qt5ct qt6ct kitty breeze breeze5 nwg-look gnome-keyring polkit hyprpolkitagent kvantum noctalia noctalia-shell hypremoji
+sudo pacman -S hyprland hyprpicker hyprshot grim slurp hyprshutdown bluez bluez-utils uwsm cliphist rofi pipewire pipewire-pulse wireplumber wl-clipboard qt5ct qt6ct kitty breeze breeze5 nwg-look gnome-keyring polkit kvantum noctalia hypremoji xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk nemo xdg-user-dirs xdg-user-dirs-gtk
 ```
+## Fedora COPR ##
+
+```
+sudo dnf copr enable lionheartp/Hyprland
+``` 
+
+## Fedora Dependencies
+```
+sudo dnf install plasma-breeze breeze-gtk breeze-icon-theme qt5ct qt6ct kvantum kvantum-qt5 pipewire pipewire-pulseaudio wireplumber bluez bluez-tools hyprland noctalia-git uwsm hyprshutdown hyprpicker hyprland-guiutils kitty hyprshot grim slurp nwg-look xdg-desktop-portal-hyprland cliphist wl-clipboard nemo xdg-user-dirs xdg-usr-dirs-gtk xdg-desktop-portal-gtk xdg-desktop-portal
 
 ## Display Manager
 
