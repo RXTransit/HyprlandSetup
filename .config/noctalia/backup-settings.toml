@@ -1,0 +1,139 @@
+[bar.default]
+margin_edge = 0
+margin_ends = 0
+radius = 0
+start = [ "launcher", "mpvpaper", "wallpaper", "workspaces" ]
+
+[dock]
+cross_axis_padding = 0
+icon_size = 24
+item_spacing = 0
+main_axis_padding = 24
+margin_edge = 0
+radius = 3
+
+[location]
+auto_locate = true
+
+[lockscreen]
+blur_intensity = 0.22999999485909939
+wallpaper = "/home/mscott/.local/share/hyprpaper/Pomni1.jpg"
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = [
+    "lockscreen-login-box@HDMI-A-2",
+    "lockscreen-login-box@HDMI-A-1",
+    "lockscreen-widget-0000000000000001",
+    "lockscreen-widget-0000000000000002"
+]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1"]
+    box_height = 70.0
+    box_width = 400.0
+    cx = 960.0
+    cy = 961.0
+    output = "HDMI-A-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        input_opacity = 1.0
+        input_radius = 6.0
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_password_hint = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-2"]
+    box_height = 70.0
+    box_width = 400.0
+    cx = 960.0
+    cy = 961.0
+    output = "HDMI-A-2"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-2".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        input_opacity = 1.0
+        input_radius = 6.0
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_password_hint = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 960.0
+    cy = 860.0
+    output = "HDMI-A-1"
+    rotation = 0.0
+    type = "clock"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000002]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 1741.0
+    cy = 996.0
+    output = "HDMI-A-1"
+    rotation = 0.0
+    type = "media_player"
+
+[plugin_settings."noctalia/mpvpaper"]
+video_directory = "~/Documents/AnimatedWallpapers"
+
+[plugins]
+enabled = [ "noctalia/mpvpaper" ]
+
+[shell]
+password_style = "random"
+polkit_agent = true
+settings_show_advanced = true
+
+[theme]
+builtin = "Eldritch"
+community_palette = "Oxocarbon"
+mode = "dark"
+source = "builtin"
+wallpaper_scheme = "dysfunctional"
+
+    [theme.templates]
+    builtin_ids = [ "gtk3", "gtk4", "hyprland", "kitty", "qt" ]
+    community_ids = [ "rofi", "steam" ]
+
+[wallpaper]
+directory = "~/.local/share/hyprpaper"
+transition = [ "wipe" ]
+transition_on_startup = true
+
+    [wallpaper.automation]
+    enabled = true
+    interval_seconds = 120
+
+    [wallpaper.default]
+    path = "/home/mscott/.local/share/hyprpaper/send-me-the-cutest-pictures-of-pomni-from-tadc-v0-2j6mbijtkslf1.png"
+
+    [wallpaper.last]
+    path = "/home/mscott/.local/share/hyprpaper/send-me-the-cutest-pictures-of-pomni-from-tadc-v0-2j6mbijtkslf1.png"
+
+    [wallpaper.monitors.HDMI-A-1]
+    path = "/home/mscott/.local/share/hyprpaper/send-me-the-cutest-pictures-of-pomni-from-tadc-v0-2j6mbijtkslf1.png"
+
+    [wallpaper.monitors.HDMI-A-2]
+    path = "/home/mscott/.local/share/hyprpaper/send-me-the-cutest-pictures-of-pomni-from-tadc-v0-2j6mbijtkslf1.png"
+
+[widget.mpvpaper]
+type = "noctalia/mpvpaper:mpvpaper"

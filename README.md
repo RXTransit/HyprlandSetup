@@ -9,10 +9,12 @@ My personal Hyprland dotfiles and configuration for Arch Linux. Migrated to LUA 
 Copy the `.config`, `.local`, and other dotfolders into your home directory:
 
 ```bash
+either move the lua or the hyprlang configs out of their respective folders  and put them directly into ~/.config/hypr/
+
 cp -r .config ~/
 cp -r .local ~/
 
-either move the lua or the hyprlang configs out of their respective folders and put them directly into ~/.config/hypr/
+then rename the ~/.config/noctalia/backup-settings.toml to config.toml and restart hyprland.
 ```
 
 ## Wallpaper
