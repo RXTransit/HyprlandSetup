@@ -1,8 +1,20 @@
 [bar.default]
+end = [
+    "media",
+    "tray",
+    "notifications",
+    "clipboard",
+    "network",
+    "bluetooth",
+    "volume",
+    "brightness",
+    "battery",
+    "session"
+]
 margin_edge = 0
 margin_ends = 0
 radius = 0
-start = [ "launcher", "mpvpaper", "wallpaper", "workspaces" ]
+start = [ "launcher", "mpvpaper", "wallhaven", "wallpaper", "workspaces" ]
 
 [dock]
 cross_axis_padding = 0
@@ -96,7 +108,7 @@ widget_order = [
 video_directory = "~/Documents/AnimatedWallpapers"
 
 [plugins]
-enabled = [ "noctalia/mpvpaper" ]
+enabled = [ "noctalia/mpvpaper", "noctalia/kaomoji", "noctalia/wallhaven" ]
 
 [shell]
 password_style = "random"
@@ -115,7 +127,7 @@ wallpaper_scheme = "dysfunctional"
     community_ids = [ "rofi", "steam" ]
 
 [wallpaper]
-directory = "~/.local/share/hyprpaper"
+directory = "/home/mscott/Documents/StaticWallpapers"
 transition = [ "wipe" ]
 transition_on_startup = true
 
@@ -124,16 +136,28 @@ transition_on_startup = true
     interval_seconds = 120
 
     [wallpaper.default]
-    path = "/home/mscott/.local/share/hyprpaper/send-me-the-cutest-pictures-of-pomni-from-tadc-v0-2j6mbijtkslf1.png"
+    path = "/home/mscott/Documents/StaticWallpapers/Charlie.png"
 
     [wallpaper.last]
-    path = "/home/mscott/.local/share/hyprpaper/send-me-the-cutest-pictures-of-pomni-from-tadc-v0-2j6mbijtkslf1.png"
+    path = "/home/mscott/Documents/StaticWallpapers/Charlie.png"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/mscott/.local/share/hyprpaper/send-me-the-cutest-pictures-of-pomni-from-tadc-v0-2j6mbijtkslf1.png"
+    path = "/home/mscott/Documents/StaticWallpapers/Charlie.png"
 
     [wallpaper.monitors.HDMI-A-2]
-    path = "/home/mscott/.local/share/hyprpaper/send-me-the-cutest-pictures-of-pomni-from-tadc-v0-2j6mbijtkslf1.png"
+    path = "/home/mscott/Documents/StaticWallpapers/Charlie.png"
+
+[widget.control-center]
+enabled = true
 
 [widget.mpvpaper]
 type = "noctalia/mpvpaper:mpvpaper"
+
+[widget.session]
+enabled = true
+
+[widget.wallhaven]
+type = "noctalia/wallhaven:wallhaven"
+
+[widget.workspaces]
+enabled = true

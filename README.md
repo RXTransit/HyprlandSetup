@@ -29,7 +29,7 @@ that's what I used lol
 ## Dependencies for ARCH with CachyOS Repos/CachyOS
 
 ```
-sudo pacman -S breeze breeze5 hyprland hyprpicker hyprshot grim slurp hyprshutdown bluez bluez-utils uwsm cliphist rofi pipewire pipewire-pulse wireplumber wl-clipboard qt5ct qt6ct kitty breeze breeze5 nwg-look gnome-keyring polkit kvantum noctalia xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk nemo xdg-user-dirs xdg-user-dirs-gtk
+sudo pacman -S breeze breeze5 hyprland hyprpicker hyprshot grim slurp hyprshutdown bluez bluez-utils uwsm cliphist pipewire pipewire-pulse wireplumber wl-clipboard qt5ct qt6ct kitty breeze breeze5 nwg-look gnome-keyring polkit kvantum noctalia xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk nemo xdg-user-dirs xdg-user-dirs-gtk
 ```
 ## Fedora COPR ##
 
@@ -47,9 +47,28 @@ sudo dnf5 config-manager setopt 'copr:copr.fedorainfracloud.org:solopasha:hyprla
 ```
 ## Fedora Dependencies
 ```
-sudo dnf install plasma-breeze breeze-gtk breeze-icon-theme qt5ct qt6ct kvantum kvantum-qt5 pipewire pipewire-pulseaudio wireplumber bluez bluez-tools hyprland noctalia-git uwsm hyprshutdown hyprpicker hyprland-guiutils kitty hyprshot grim slurp nwg-look xdg-desktop-portal-hyprland cliphist wl-clipboard nemo xdg-user-dirs xdg-user-dirs-gtk xdg-desktop-portal-gtk xdg-desktop-portal rofi fastfetch mpvpaper
-
+sudo dnf install plasma-breeze breeze-gtk breeze-icon-theme qt5ct qt6ct kvantum kvantum-qt5 pipewire pipewire-pulseaudio wireplumber bluez bluez-tools hyprland noctalia-git uwsm hyprshutdown hyprpicker hyprland-guiutils kitty hyprshot grim slurp nwg-look xdg-desktop-portal-hyprland cliphist wl-clipboard nemo xdg-user-dirs xdg-user-dirs-gtk xdg-desktop-portal-gtk xdg-desktop-portal fastfetch mpvpaper
 ```
+## Debian Dependencies (Debian 14 & 13)
+```sudo apt install hyprland kitty qt5ct qt6ct uwsm qt-style-kvantum nemo pipewire pipewire-pulse wireplumber fastfetch xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk hyprshutdown hyprpicker bluez bluez-tools cliphist wl-clipboard grim slurp jq libnotify-bin```
+Noctalia installation (from their website)
+1. Import repo signing key
+```curl -fsSL https://pkg.noctalia.dev/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/noctalia.gpg```
+2. add repo 
+```echo "deb [signed-by=/etc/apt/keyrings/noctalia.gpg] https://pkg.noctalia.dev/apt trixie main" | sudo tee /etc/apt/sources.list.d/noctalia.list```
+3. Install noctalia
+```sudo apt update
+sudo apt install noctalia
+```
+## Hyprshot Debian installation 
+```
+$ git clone https://github.com/Gustash/hyprshot.git Hyprshot
+$ ln -s $(pwd)/Hyprshot/hyprshot $HOME/.local/bin
+$ chmod +x Hyprshot/hyprshot
+```
+## Animated Wallpapers
+Video wallpapers set by Noctalia require mpvpaper 
+The above Arch and Fedora dependencies already have precompiled binaries, Debian users will need to build from source from https://github.com/GhostNaN/mpvpaper.git
 ## Display Manager
 
 Works best with **SDDM** login manager.
@@ -64,7 +83,7 @@ systemctl --user restart pipewire pipewire-pulse wireplumber
 
 ## Notes
 
-- Only tested on **Arch Linux**, btw.
+- Tested on Arch Linux and Fedora, btw.
 - Works well in `uwsm` managed session.
 - `XF86AudioRaiseVolume` / `XF86AudioLowerVolume` keybinds only work if you have a **Corsair K70 RGB Core** keyboard with **OpenLinkHub** installed. (ID 1b1c:1bfd Corsair CORSAIR K70 CORE RGB Mechanical Gaming Keyboard)
 
