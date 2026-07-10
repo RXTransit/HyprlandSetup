@@ -49,7 +49,6 @@ hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag())
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize())
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("hyprshutdown"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
-hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("cliphist list | rofi -dmenu -display-columns 2 | cliphist decode | wl-copy"))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser .. " --new-window"))
@@ -157,10 +156,7 @@ hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume --limit 1.0 @D
 hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("noctalia msg session-lock"))
 
---Source: ~./.config/hypr/hypremoji.lua— convert this file to Lua and ensure it is on Lua's package.path.
-require("hypremoji")
-
--- Source: ~/.config/hypr/noctalia.conf — convert this file to Lua and ensure it is on Lua's package.path.
+-- Source: ~/.config/hypr/noctalia.lua — convert this file to Lua and ensure it is on Lua's package.path.
 require("noctalia").apply_theme()
 hl.config({
     general = {
@@ -212,9 +208,9 @@ hl.config({
 
 hl.on("hyprland.start", function()
     --hl.exec_cmd("openrgb --profile RGB")
-    --hl.exec_cmd("noctalia")
-    --hl.exec_cmd("wl-paste --type text --watch cliphist store")
-    --hl.exec_cmd("wl-paste --type image --watch cliphist store")
+    hl.exec_cmd("noctalia")
+    hl.exec_cmd("wl-paste --type text --watch cliphist store")
+    hl.exec_cmd("wl-paste --type image --watch cliphist store")
     --hl.exec_cmd("uwsm app -- steam")
     --hl.exec_cmd("flatpak run dev.vencord.Vesktop")
 end)
