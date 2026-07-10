@@ -39,7 +39,7 @@ sudo dnf copr enable lionheartp/Hyprland
 
 ## Fedora Dependencies
 ```
-sudo dnf install plasma-breeze breeze-gtk breeze-icon-theme qt5ct qt6ct kvantum kvantum-qt5 pipewire pipewire-pulseaudio wireplumber bluez bluez-tools hyprland noctalia-git uwsm hyprshutdown hyprpicker hyprland-guiutils kitty hyprshot grim slurp nwg-look xdg-desktop-portal-hyprland cliphist wl-clipboard nemo xdg-user-dirs xdg-usr-dirs-gtk xdg-desktop-portal-gtk xdg-desktop-portal rofi
+sudo dnf install plasma-breeze breeze-gtk breeze-icon-theme qt5ct qt6ct kvantum kvantum-qt5 pipewire pipewire-pulseaudio wireplumber bluez bluez-tools hyprland noctalia-git uwsm hyprshutdown hyprpicker hyprland-guiutils kitty hyprshot grim slurp nwg-look xdg-desktop-portal-hyprland cliphist wl-clipboard nemo xdg-user-dirs xdg-user-dirs-gtk xdg-desktop-portal-gtk xdg-desktop-portal rofi
 
 ```
 ## Display Manager
