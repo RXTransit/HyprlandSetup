@@ -51,7 +51,7 @@ sudo dnf install plasma-breeze breeze-gtk breeze-icon-theme qt5ct qt6ct kvantum 
 ```
 ## Debian Dependencies (Debian 14 & 13)
 ```
-sudo apt install hyprland kitty qt5ct qt6ct uwsm qt-style-kvantum nemo pipewire pipewire-pulse wireplumber fastfetch xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk hyprshutdown hyprpicker bluez bluez-tools cliphist wl-clipboard grim slurp jq libnotify-bin
+sudo apt install hyprland kitty qt5ct qt6ct uwsm qt-style-kvantum nemo pipewire pipewire-pulse wireplumber fastfetch xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk hyprshutdown hyprpicker bluez bluez-tools cliphist wl-clipboard grim slurp jq libnotify-bin breeze-icon-theme 
 ```
 Noctalia installation (from their website)
 1. Import repo signing key
