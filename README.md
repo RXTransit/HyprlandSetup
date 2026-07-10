@@ -50,14 +50,21 @@ sudo dnf5 config-manager setopt 'copr:copr.fedorainfracloud.org:solopasha:hyprla
 sudo dnf install plasma-breeze breeze-gtk breeze-icon-theme qt5ct qt6ct kvantum kvantum-qt5 pipewire pipewire-pulseaudio wireplumber bluez bluez-tools hyprland noctalia-git uwsm hyprshutdown hyprpicker hyprland-guiutils kitty hyprshot grim slurp nwg-look xdg-desktop-portal-hyprland cliphist wl-clipboard nemo xdg-user-dirs xdg-user-dirs-gtk xdg-desktop-portal-gtk xdg-desktop-portal fastfetch mpvpaper
 ```
 ## Debian Dependencies (Debian 14 & 13)
-```sudo apt install hyprland kitty qt5ct qt6ct uwsm qt-style-kvantum nemo pipewire pipewire-pulse wireplumber fastfetch xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk hyprshutdown hyprpicker bluez bluez-tools cliphist wl-clipboard grim slurp jq libnotify-bin```
+```
+sudo apt install hyprland kitty qt5ct qt6ct uwsm qt-style-kvantum nemo pipewire pipewire-pulse wireplumber fastfetch xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk hyprshutdown hyprpicker bluez bluez-tools cliphist wl-clipboard grim slurp jq libnotify-bin
+```
 Noctalia installation (from their website)
 1. Import repo signing key
-```curl -fsSL https://pkg.noctalia.dev/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/noctalia.gpg```
+```
+curl -fsSL https://pkg.noctalia.dev/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/noctalia.gpg
+```
 2. add repo 
-```echo "deb [signed-by=/etc/apt/keyrings/noctalia.gpg] https://pkg.noctalia.dev/apt trixie main" | sudo tee /etc/apt/sources.list.d/noctalia.list```
+```
+echo "deb [signed-by=/etc/apt/keyrings/noctalia.gpg] https://pkg.noctalia.dev/apt trixie main" | sudo tee /etc/apt/sources.list.d/noctalia.list
+```
 3. Install noctalia
-```sudo apt update
+```
+sudo apt update
 sudo apt install noctalia
 ```
 ## Hyprshot Debian installation 
