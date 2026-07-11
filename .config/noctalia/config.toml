@@ -1,5 +1,5 @@
 [bar.default]
-center = [ "workspaces", "active_window" ]
+center = [ "clock", "cpu", "ram" ]
 end = [
     "media",
     "audio_visualizer",
@@ -16,7 +16,7 @@ end = [
 margin_edge = 0
 margin_ends = 0
 radius = 0
-start = [ "launcher", "mpvpaper", "wallhaven", "wallpaper", "clock", "ram", "cpu" ]
+start = [ "launcher", "mpvpaper", "wallhaven", "wallpaper", "workspaces", "active_window" ]
 
 [dock]
 cross_axis_padding = 0
@@ -36,7 +36,7 @@ auto_locate = true
 
 [lockscreen]
 blur_intensity = 0.22999999485909939
-wallpaper = "/home/mscott/.local/share/hyprpaper/Pomni1.jpg"
+wallpaper = "/home/mscott/Documents/StaticWallpapers/Pomni3.jpg"
 
 [lockscreen_widgets]
 enabled = true
@@ -45,7 +45,8 @@ widget_order = [
     "lockscreen-login-box@HDMI-A-2",
     "lockscreen-login-box@HDMI-A-1",
     "lockscreen-widget-0000000000000001",
-    "lockscreen-widget-0000000000000002"
+    "lockscreen-widget-0000000000000002",
+    "lockscreen-widget-0000000000000003"
 ]
 
     [lockscreen_widgets.grid]
@@ -111,6 +112,19 @@ widget_order = [
     rotation = 0.0
     type = "media_player"
 
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000003]
+    box_height = 128.0
+    box_width = 304.0
+    cx = 1740.0
+    cy = 848.0
+    output = "HDMI-A-1"
+    rotation = 0.0
+    type = "audio_visualizer"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000003.settings]
+        bands = 32
+        show_when_idle = true
+
 [plugin_settings."noctalia/mpvpaper"]
 video_directory = "~/Documents/AnimatedWallpapers"
 
@@ -118,9 +132,16 @@ video_directory = "~/Documents/AnimatedWallpapers"
 enabled = [ "noctalia/mpvpaper", "noctalia/kaomoji", "noctalia/wallhaven" ]
 
 [shell]
+external_ip_enabled = true
 password_style = "random"
 polkit_agent = true
 settings_show_advanced = true
+
+    [shell.launcher]
+    app_grid = true
+
+    [shell.panel]
+    launcher_position = "auto"
 
     [shell.screen_corners]
     size = 31
@@ -133,8 +154,8 @@ source = "community"
 wallpaper_scheme = "dysfunctional"
 
     [theme.templates]
-    builtin_ids = [ "gtk3", "gtk4", "hyprland", "kitty", "qt" ]
-    community_ids = [ "rofi", "steam" ]
+    builtin_ids = [ "btop", "gtk3", "gtk4", "hyprland", "kcolorscheme", "kitty", "qt" ]
+    community_ids = [ "discord", "papirus-icons", "steam" ]
 
 [wallpaper]
 directory = "/home/mscott/Documents/StaticWallpapers"
