@@ -94,6 +94,15 @@ systemctl --user restart pipewire pipewire-pulse wireplumber
 - Works well in `uwsm` managed session.
 - `XF86AudioRaiseVolume` / `XF86AudioLowerVolume` keybinds only work if you have a **Corsair K70 RGB Core** keyboard with **OpenLinkHub** installed. (ID 1b1c:1bfd Corsair CORSAIR K70 CORE RGB Mechanical Gaming Keyboard)
 
+To set kitty as default terminal in nemo when opening directorys in terminal run
+```
+gsettings set org.cinnamon.desktop.default-applications.terminal exec kitty
+```
+Like wise you can set nemo as default file manager as well
+```
+xdg-mime default nemo.desktop inode/directory application/x-gnome-saved-search
+```
+
 ## Keybindings
 
 | Key | Action |
