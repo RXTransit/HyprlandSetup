@@ -120,3 +120,7 @@ systemctl --user restart pipewire pipewire-pulse wireplumber
 ##PS
 
 If anyone could figure out how to transfer this to NixOs, much appreciated!
+
+Upon start-up of Hyprland, you will have an error as noctalia has not been initialised 
+
+Run noctalia for the first time in a terminal and it will go away, then log out and log back in.
