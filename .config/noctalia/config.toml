@@ -1,6 +1,8 @@
 [bar.default]
+center = [ "workspaces", "active_window" ]
 end = [
     "media",
+    "audio_visualizer",
     "tray",
     "notifications",
     "clipboard",
@@ -14,15 +16,20 @@ end = [
 margin_edge = 0
 margin_ends = 0
 radius = 0
-start = [ "launcher", "mpvpaper", "wallhaven", "wallpaper", "workspaces" ]
+start = [ "launcher", "mpvpaper", "wallhaven", "wallpaper", "clock", "ram", "cpu" ]
 
 [dock]
 cross_axis_padding = 0
 icon_size = 24
 item_spacing = 0
+launcher_position = "start"
 main_axis_padding = 24
 margin_edge = 0
 radius = 3
+reserve_space = false
+
+[hot_corners.top_left]
+action = "launcher"
 
 [location]
 auto_locate = true
@@ -115,11 +122,14 @@ password_style = "random"
 polkit_agent = true
 settings_show_advanced = true
 
+    [shell.screen_corners]
+    size = 31
+
 [theme]
-builtin = "Eldritch"
-community_palette = "Oxocarbon"
+builtin = "Tokyo-Night"
+community_palette = "Breeze"
 mode = "dark"
-source = "builtin"
+source = "community"
 wallpaper_scheme = "dysfunctional"
 
     [theme.templates]
@@ -132,28 +142,45 @@ transition = [ "wipe" ]
 transition_on_startup = true
 
     [wallpaper.automation]
-    enabled = true
+    enabled = false
     interval_seconds = 120
+    order = "alphabetical"
 
     [wallpaper.default]
-    path = "/home/mscott/Documents/StaticWallpapers/Charlie.png"
+    path = "/home/mscott/Documents/StaticWallpapers/gimme-your-cutest-pomni-pics-v0-s0pvjqj7izlf1.png"
 
     [wallpaper.last]
     path = "/home/mscott/Documents/StaticWallpapers/Charlie.png"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/mscott/Documents/StaticWallpapers/Charlie.png"
+    path = "/home/mscott/Documents/StaticWallpapers/do-you-still-think-pomni-is-cute-adorable-after-6-episodes-v0-i9499una0ykf1.png"
 
     [wallpaper.monitors.HDMI-A-2]
     path = "/home/mscott/Documents/StaticWallpapers/Charlie.png"
 
+[widget.clock]
+enabled = true
+format = "{:%a} {:%d.%m.%Y} {:%-I:%M %p}"
+
 [widget.control-center]
+enabled = true
+
+[widget.date]
+enabled = true
+
+[widget.media]
 enabled = true
 
 [widget.mpvpaper]
 type = "noctalia/mpvpaper:mpvpaper"
 
+[widget.network]
+enabled = true
+
 [widget.session]
+enabled = true
+
+[widget.tray]
 enabled = true
 
 [widget.wallhaven]
