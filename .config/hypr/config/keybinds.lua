@@ -22,14 +22,10 @@ hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize())
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("hyprshutdown"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
-hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({
-    mode = "fullscreen",
-    action = "toggle",
-}))
+hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({mode = "fullscreen", action = "toggle",}))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser .. " --new-window"))
 hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("hyprpicker -a -n"))
 hl.bind(mainMod .. " + X", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("noctalia msg session-lock"))
 
 -- Media controls
 hl.bind("XF86AudioStop", hl.dsp.exec_cmd("playerctl stop"),{locked = true, repeating = false,})
@@ -69,12 +65,6 @@ hl.bind(mainMod .. " + Print", hl.dsp.exec_cmd("hyprshot -m window"))
 -- Volume Controls
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume --limit 1.0 @DEFAULT_AUDIO_SINK@ 5%+"),{locked = true, repeating = true,})
 hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"),{locked = true, repeating = true,})
-hl.bind(
-    "XF86AudioMute",
-    hl.dsp.exec_cmd(
-        "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-    ),
-    {
-        locked = true,
-    }
-)
+hl.bind("XF86AudioMute",hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),{locked = true,})
+-- Lock Screen
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("noctalia msg session lock"))

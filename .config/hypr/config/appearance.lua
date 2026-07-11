@@ -23,10 +23,6 @@ hl.animation({
     bezier = "easeOutCubic",
     style = "gnomed",
 })
-
--- Noctalia colour templates
-require("config.noctalia").apply_theme()
-
 hl.config({
     general = {
         gaps_in = 0,
