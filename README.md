@@ -3,7 +3,7 @@
 ![Hyprland Setup](image.png)
 
 My personal Hyprland dotfiles and configuration for Arch Linux. Migrated to LUA programming language
-## Installation autostart
+## Installation Script
 ```
 sudo chmod +x install.sh && ./install.sh
 ```
@@ -14,6 +14,7 @@ sudo chmod +x install.sh && ./install.sh
 ./install.sh --skip-dotfiles
 ./install.sh --yes
 ```
+## Manual Install
 Copy the `.config`, `.local`, and other dotfolders into your home directory:
 
 ```bash
