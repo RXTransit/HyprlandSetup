@@ -38,7 +38,7 @@ that's what I used lol
 ## Dependencies for ARCH with CachyOS Repos/CachyOS
 
 ```
-sudo pacman -S breeze breeze5 hyprland hyprpicker hyprshot grim slurp hyprshutdown bluez bluez-utils uwsm cliphist pipewire pipewire-pulse wireplumber wl-clipboard qt5ct qt6ct kitty breeze breeze5 nwg-look gnome-keyring polkit kvantum noctalia xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk nemo xdg-user-dirs xdg-user-dirs-gtk
+sudo pacman -S breeze breeze5 hyprland hyprpicker grim slurp hyprshutdown bluez bluez-utils uwsm cliphist pipewire pipewire-pulse wireplumber wl-clipboard qt5ct qt6ct kitty breeze breeze5 nwg-look gnome-keyring polkit kvantum noctalia xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk nemo xdg-user-dirs xdg-user-dirs-gtk
 ```
 ## Fedora COPR ##
 
@@ -56,7 +56,7 @@ sudo dnf5 config-manager setopt 'copr:copr.fedorainfracloud.org:solopasha:hyprla
 ```
 ## Fedora Dependencies
 ```
-sudo dnf install plasma-breeze breeze-gtk breeze-icon-theme qt5ct qt6ct kvantum kvantum-qt5 pipewire pipewire-pulseaudio wireplumber bluez bluez-tools hyprland noctalia-git uwsm hyprshutdown hyprpicker hyprland-guiutils kitty hyprshot grim slurp nwg-look xdg-desktop-portal-hyprland cliphist wl-clipboard nemo xdg-user-dirs xdg-user-dirs-gtk xdg-desktop-portal-gtk xdg-desktop-portal fastfetch mpvpaper
+sudo dnf install plasma-breeze breeze-gtk breeze-icon-theme qt5ct qt6ct kvantum kvantum-qt5 pipewire pipewire-pulseaudio wireplumber bluez bluez-tools hyprland noctalia-git uwsm hyprshutdown hyprpicker hyprland-guiutils kitty grim slurp nwg-look xdg-desktop-portal-hyprland cliphist wl-clipboard nemo xdg-user-dirs xdg-user-dirs-gtk xdg-desktop-portal-gtk xdg-desktop-portal fastfetch mpvpaper
 ```
 ## Debian Dependencies (Debian 14 & 13)
 ```
@@ -76,12 +76,7 @@ echo "deb [signed-by=/etc/apt/keyrings/noctalia.gpg] https://pkg.noctalia.dev/ap
 sudo apt update
 sudo apt install noctalia
 ```
-## Hyprshot Debian installation 
-```
-git clone https://github.com/Gustash/hyprshot.git Hyprshot
-ln -s ~/Hyprshot/hyprshot ~/.local/bin/
-chmod +x Hyprshot/hyprshot
-```
+
 ## Animated Wallpapers
 Video wallpapers set by Noctalia require mpvpaper 
 The above Arch and Fedora dependencies already have precompiled binaries, Debian users will need to build from source from https://github.com/GhostNaN/mpvpaper.git
@@ -111,29 +106,6 @@ Like wise you can set nemo as default file manager as well
 ```
 xdg-mime default nemo.desktop inode/directory application/x-gnome-saved-search
 ```
-
-## Keybindings
-
-| Key | Action |
-|-----|--------|
-| Super + Q | Launch terminal (kitty) |
-| Super + C | Kill active window |
-| Super + M | Shutdown (hyprshutdown) |
-| Super + E | Open file manager (nemo) |
-| Super + R | Launch app menu (noctalia) |
-| Super + F | Toggle fullscreen |
-| Super + B | Open browser |(google-chrome-stable)
-| Super + P | Pick color (hyprpicker) |
-| Super + X | Toggle floating |
-| Super + 1-0 | Switch to workspace |
-| Super + Shift + 1-0 | Move window to workspace |
-| Super + Arrows | Move window in tiling layout |
-| Print | Screenshot region |
-| Shift + Print | Screenshot output |
-| Super + Print | Screenshot window |
-| XF86AudioRaiseVolume | Raise volume |
-| XF86AudioLowerVolume | Lower volume |
-
 
 ##PS
 

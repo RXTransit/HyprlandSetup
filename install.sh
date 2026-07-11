@@ -121,7 +121,7 @@ detect_package_manager() {
 install_arch_packages() {
     local packages=(
         breeze breeze5
-        hyprland hyprpicker hyprshot hyprshutdown
+        hyprland hyprpicker hyprshutdown
         grim slurp
         bluez bluez-utils
         uwsm cliphist
@@ -174,7 +174,7 @@ install_fedora_packages() {
         bluez bluez-tools
         hyprland uwsm hyprshutdown hyprpicker
         kitty
-        hyprshot grim slurp
+        grim slurp
         nwg-look
         xdg-desktop-portal
         xdg-desktop-portal-hyprland
@@ -291,23 +291,6 @@ install_suse_packages() {
             warn "Could not install '$pkg'."
         fi
     done
-}
-
-install_hyprshot_from_git() {
-    command_exists git || die "git is required to install Hyprshot."
-    local source_dir="${XDG_DATA_HOME:-$HOME/.local/share}/hyprshot"
-    local bin_dir="$HOME/.local/bin"
-
-    run mkdir -p "$bin_dir"
-
-    if [[ -d "$source_dir/.git" ]]; then
-        run git -C "$source_dir" pull --ff-only
-    else
-        run git clone https://github.com/Gustash/hyprshot.git "$source_dir"
-    fi
-
-    run ln -sfn "$source_dir/hyprshot" "$bin_dir/hyprshot"
-    run chmod +x "$source_dir/hyprshot"
 }
 
 install_packages() {
