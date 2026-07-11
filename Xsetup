@@ -1,5 +1,5 @@
 #!/usr/bin/sh
 # Xsetup - run as root before the login dialog appears
 xrandr \
---output HDMI-A-0 --mode 1920x1080  --rate 120 --pos 1920x0 --primary \
---output HDMI-A-1 --mode 1920x1080 --rate 120 --pos 0x0
+--output HDMI-2 --mode 1920x1080  --rate 120 --pos 1920x0 --primary \
+--output HDMI-1 --mode 1920x1080 --rate 120 --pos 0x0
