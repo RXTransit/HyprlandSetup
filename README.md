@@ -3,9 +3,17 @@
 ![Hyprland Setup](image.png)
 
 My personal Hyprland dotfiles and configuration for Arch Linux. Migrated to LUA programming language
-
-## Installation
-
+## Installation autostart
+```
+sudo chmod +x install.sh && ./install.sh
+```
+## Useful Options
+```
+./install.sh --dry-run
+./install.sh --skip-packages
+./install.sh --skip-dotfiles
+./install.sh --yes
+```
 Copy the `.config`, `.local`, and other dotfolders into your home directory:
 
 ```bash
@@ -135,3 +143,9 @@ Upon start-up of Hyprland, you will have an error as noctalia has not been initi
 Run noctalia for the first time in a terminal and it will go away, then log out and log back in.
 
 My Hyprland dotfiles have now been split for more ease of use. 
+
+I have not actually tested that install.sh script
+
+I have done a dry run of it 
+
+
