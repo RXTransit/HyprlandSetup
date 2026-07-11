@@ -69,9 +69,9 @@ sudo apt install noctalia
 ```
 ## Hyprshot Debian installation 
 ```
-$ git clone https://github.com/Gustash/hyprshot.git Hyprshot
-$ ln -s $(pwd)/Hyprshot/hyprshot $HOME/.local/bin
-$ chmod +x Hyprshot/hyprshot
+git clone https://github.com/Gustash/hyprshot.git Hyprshot
+ln -s ~/Hyprshot/hyprshot ~/.local/bin/
+chmod +x Hyprshot/hyprshot
 ```
 ## Animated Wallpapers
 Video wallpapers set by Noctalia require mpvpaper 
@@ -90,7 +90,7 @@ systemctl --user restart pipewire pipewire-pulse wireplumber
 
 ## Notes
 
-- Tested on Arch Linux and Fedora, btw.
+- Tested on Arch Linux and Fedora and Debian, btw.
 - Works well in `uwsm` managed session.
 - `XF86AudioRaiseVolume` / `XF86AudioLowerVolume` keybinds only work if you have a **Corsair K70 RGB Core** keyboard with **OpenLinkHub** installed. (ID 1b1c:1bfd Corsair CORSAIR K70 CORE RGB Mechanical Gaming Keyboard)
 
@@ -102,14 +102,11 @@ systemctl --user restart pipewire pipewire-pulse wireplumber
 | Super + C | Kill active window |
 | Super + M | Shutdown (hyprshutdown) |
 | Super + E | Open file manager (nemo) |
-| Super + V | Clipboard history |
 | Super + R | Launch app menu (noctalia) |
 | Super + F | Toggle fullscreen |
-| Super + B | Open browser |
-| Super + W | Reload wallpapers |
+| Super + B | Open browser |(google-chrome-stable)
 | Super + P | Pick color (hyprpicker) |
 | Super + X | Toggle floating |
-| Super + L | Lock screen (hyprlock) |
 | Super + 1-0 | Switch to workspace |
 | Super + Shift + 1-0 | Move window to workspace |
 | Super + Arrows | Move window in tiling layout |
