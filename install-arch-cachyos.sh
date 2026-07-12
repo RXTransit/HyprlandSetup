@@ -166,7 +166,6 @@ install_packages() {
         hyprland
         hyprpicker
         hyprshutdown
-        noctalia
         bluez
         bluez-utils
         uwsm
@@ -185,19 +184,54 @@ install_packages() {
         xdg-desktop-portal
         xdg-desktop-portal-hyprland
         xdg-desktop-portal-gtk
-        nemo
         xdg-user-dirs
         xdg-user-dirs-gtk
         jq
         libnotify
-        playerctl
-        openrgb
-        steam
-        flatpak
+        thunar
     )
 
     log "Synchronising package databases and upgrading the system"
     run_root pacman -Syu --needed --noconfirm "${packages[@]}"
+}
+
+
+install_aur_packages() {
+    local aur_helper=""
+    local aur_packages=(
+        noctalia
+        mpvpaper
+    )
+
+    if command_exists paru; then
+        aur_helper="paru"
+    elif command_exists yay; then
+        aur_helper="yay"
+    else
+        log "No AUR helper found; installing yay"
+        run_root pacman -S --needed --noconfirm base-devel git
+
+        if "$DRY_RUN"; then
+            printf '+ temp_dir=$(mktemp -d)\n'
+            printf '+ git clone https://aur.archlinux.org/yay-bin.git "$temp_dir/yay-bin"\n'
+            printf '+ cd "$temp_dir/yay-bin" && makepkg -si --needed --noconfirm\n'
+        else
+            local temp_dir
+            temp_dir="$(mktemp -d)"
+            trap 'rm -rf -- "$temp_dir"' RETURN
+
+            git clone https://aur.archlinux.org/yay-bin.git "$temp_dir/yay-bin"
+            (
+                cd "$temp_dir/yay-bin"
+                makepkg -si --needed --noconfirm
+            )
+        fi
+
+        aur_helper="yay"
+    fi
+
+    log "Installing AUR packages with $aur_helper"
+    run "$aur_helper" -S --needed --noconfirm "${aur_packages[@]}"
 }
 
 backup_path() {
@@ -271,14 +305,12 @@ post_install_notes() {
 
 Post-install checklist
 ----------------------
-1. Edit ~/.config/hypr/config/monitors.lua for your displays.
+1. Edit ~/.config/hypr/config/monitors.lua for your displays. likewise ~/.config/hypr/config/workspaces.lua for persistence
 2. Review ~/.config/hypr/config/autostart.lua and remove programs you do not use.
-3. Run Noctalia once in a terminal so it can initialise its files.
-4. Log out and start a Hyprland/UWSM session.
+3. Log out and start a Hyprland/UWSM session.
 
 Optional desktop defaults:
-  gsettings set org.cinnamon.desktop.default-applications.terminal exec kitty
-  xdg-mime default nemo.desktop inode/directory application/x-gnome-saved-search
+  xdg-mime default thunar.desktop inode/directory application/x-gnome-saved-search
 EOF
 }
 
@@ -292,7 +324,10 @@ main() {
     check_supported_system
 
     "$SKIP_REPOS" || enable_cachyos_repositories
-    "$SKIP_PACKAGES" || install_packages
+    if ! "$SKIP_PACKAGES"; then
+        install_packages
+        install_aur_packages
+    fi
     "$SKIP_DOTFILES" || install_dotfiles
 
     post_install_notes
