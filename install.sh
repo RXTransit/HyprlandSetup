@@ -264,11 +264,6 @@ install_debian_packages() {
                 warn "Noctalia installation failed. Check whether your release is supported."
         fi
     fi
-
-    if ! command_exists hyprshot; then
-        warn "Hyprshot was not found in APT. Installing it into ~/.local/bin from its Git repository."
-        install_hyprshot_from_git
-    fi
 }
 
 install_suse_packages() {
