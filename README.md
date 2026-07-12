@@ -40,42 +40,6 @@ that's what I used lol
 ```
 sudo pacman -S breeze breeze5 hyprland hyprpicker grim slurp hyprshutdown bluez bluez-utils uwsm cliphist pipewire pipewire-pulse wireplumber wl-clipboard qt5ct qt6ct kitty breeze breeze5 nwg-look gnome-keyring polkit kvantum noctalia xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk nemo xdg-user-dirs xdg-user-dirs-gtk
 ```
-## Fedora COPR ##
-
-Add Hyprland Repos
-```
-sudo dnf copr enable lionheartp/Hyprland
-```
-This one specifically for mpvpaper
-```
-sudo dnf copr enable solopasha/hyprland
-```
-Only allow mpvpaper
-```
-sudo dnf5 config-manager setopt 'copr:copr.fedorainfracloud.org:solopasha:hyprland.includepkgs=mpvpaper' 
-```
-## Fedora Dependencies
-```
-sudo dnf install plasma-breeze breeze-gtk breeze-icon-theme qt5ct qt6ct kvantum kvantum-qt5 pipewire pipewire-pulseaudio wireplumber bluez bluez-tools hyprland noctalia-git uwsm hyprshutdown hyprpicker hyprland-guiutils kitty grim slurp nwg-look xdg-desktop-portal-hyprland cliphist wl-clipboard nemo xdg-user-dirs xdg-user-dirs-gtk xdg-desktop-portal-gtk xdg-desktop-portal fastfetch mpvpaper
-```
-## Debian Dependencies (Debian 14 & 13)
-```
-sudo apt install hyprland kitty qt5ct qt6ct uwsm qt-style-kvantum nemo pipewire pipewire-pulse wireplumber fastfetch xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk hyprshutdown hyprpicker bluez bluez-tools cliphist wl-clipboard grim slurp jq libnotify-bin breeze-icon-theme 
-```
-Noctalia installation (from their website)
-1. Import repo signing key
-```
-curl -fsSL https://pkg.noctalia.dev/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/noctalia.gpg
-```
-2. add repo 
-```
-echo "deb [signed-by=/etc/apt/keyrings/noctalia.gpg] https://pkg.noctalia.dev/apt trixie main" | sudo tee /etc/apt/sources.list.d/noctalia.list
-```
-3. Install noctalia
-```
-sudo apt update
-sudo apt install noctalia
-```
 
 ## Animated Wallpapers
 Video wallpapers set by Noctalia require mpvpaper 
@@ -94,7 +58,7 @@ systemctl --user restart pipewire pipewire-pulse wireplumber
 
 ## Notes
 
-- Tested on Arch Linux and Fedora and Debian, btw.
+- Tested on Arch Linux btw.
 - Works well in `uwsm` managed session.
 - `XF86AudioRaiseVolume` / `XF86AudioLowerVolume` keybinds only work if you have a **Corsair K70 RGB Core** keyboard with **OpenLinkHub** installed. (ID 1b1c:1bfd Corsair CORSAIR K70 CORE RGB Mechanical Gaming Keyboard)
 
@@ -120,5 +84,9 @@ My Hyprland dotfiles have now been split for more ease of use.
 I have not actually tested that install.sh script
 
 I have done a dry run of it 
+
+This is arch only now
+
+non-arch users can figure out instructions for their own distros
 
 
