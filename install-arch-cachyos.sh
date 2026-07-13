@@ -189,6 +189,7 @@ install_packages() {
         jq
         libnotify
         thunar
+        power-profiles-daemon
     )
 
     log "Synchronising package databases and upgrading the system"

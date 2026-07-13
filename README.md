@@ -38,7 +38,7 @@ that's what I used lol
 ## Dependencies for ARCH with CachyOS Repos/CachyOS
 
 ```
-sudo pacman -S breeze breeze5 hyprland hyprpicker grim slurp hyprshutdown bluez bluez-utils uwsm cliphist pipewire pipewire-pulse wireplumber wl-clipboard qt5ct qt6ct kitty breeze breeze5 nwg-look gnome-keyring polkit kvantum noctalia xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk nemo xdg-user-dirs xdg-user-dirs-gtk
+sudo pacman -S breeze breeze5 hyprland hyprpicker grim slurp hyprshutdown bluez bluez-utils uwsm cliphist pipewire pipewire-pulse wireplumber wl-clipboard qt5ct qt6ct kitty breeze breeze5 nwg-look gnome-keyring polkit kvantum noctalia xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk nemo xdg-user-dirs xdg-user-dirs-gtk power-profiles-daemon
 ```
 
 ## Animated Wallpapers
