@@ -26,7 +26,8 @@ hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({mode = "fullscreen", action
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser .. " --new-window"))
 hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("hyprpicker -a -n"))
 hl.bind(mainMod .. " + X", hl.dsp.window.float({ action = "toggle" }))
-
+hl.bind("F12", hl.dsp.exec_cmd("noctalia msg power-cycle"),{locked = true,})
+hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("noctalia msg panel-open clipboard"))
 -- Media controls
 hl.bind("XF86AudioStop", hl.dsp.exec_cmd("noctalia msg media stop"),{locked = true, repeating = false,})
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("noctalia msg media previous"),{locked = true, repeating = false,})
