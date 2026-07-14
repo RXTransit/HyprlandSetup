@@ -190,6 +190,12 @@ install_packages() {
         libnotify
         thunar
         power-profiles-daemon
+        sddm
+        qt6-declarative
+        qt6-svg
+        qt6-virtualkeyboard
+        qt6-multimediia
+        qt6-imageformats
     )
 
     log "Synchronising package databases and upgrading the system"

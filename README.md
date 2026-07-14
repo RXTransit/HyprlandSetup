@@ -22,6 +22,11 @@ either move the lua or the hyprlang configs out of their respective folders  and
 
 cp -r .config ~/
 cp -r .local ~/
+sudo cp -r usr/ /
+sudo cp -r etc/ /
+
+sudo chown -R root /etc 
+sudo chown -R root /usr
 
 then rename the ~/.config/noctalia/backup-settings.toml to config.toml and restart hyprland.
 ```
@@ -38,7 +43,7 @@ that's what I used lol
 ## Dependencies for ARCH with CachyOS Repos/CachyOS
 
 ```
-sudo pacman -S breeze breeze5 hyprland hyprpicker grim slurp hyprshutdown bluez bluez-utils uwsm cliphist pipewire pipewire-pulse wireplumber wl-clipboard qt5ct qt6ct kitty breeze breeze5 nwg-look gnome-keyring polkit kvantum noctalia xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk nemo xdg-user-dirs xdg-user-dirs-gtk power-profiles-daemon
+sudo pacman -S breeze breeze5 hyprland hyprpicker grim slurp hyprshutdown bluez bluez-utils uwsm cliphist pipewire pipewire-pulse wireplumber wl-clipboard qt5ct qt6ct kitty breeze breeze5 nwg-look gnome-keyring polkit kvantum noctalia xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk nemo xdg-user-dirs xdg-user-dirs-gtk power-profiles-daemon sddm qt6-declarative qt6-svg qt6-virtualkeyboard qt6-multimedia qt6-imageformats
 ```
 
 ## Animated Wallpapers
@@ -47,6 +52,7 @@ The above Arch and Fedora dependencies already have precompiled binaries, Debian
 ## Display Manager
 
 Works best with **SDDM** login manager.
+Included is the SDDM Silent Gruvbox Theme
 
 ## Audio
 
