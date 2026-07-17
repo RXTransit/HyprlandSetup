@@ -1,10 +1,10 @@
 -- Main Hyprland Lua config
 
-require("config.appearance")
-require("config.monitors")
-require("config.workspaces")
-require("config.keybinds")
-require("config.autostart")
+require("appearance")
+require("monitors")
+require("workspaces")
+require("keybinds")
+require("autostart")
 
 -- For Noctalia Color templates
 require("noctalia").apply_theme()
