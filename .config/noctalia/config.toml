@@ -1,9 +1,15 @@
+[audio]
+enable_sounds = true
+sound_volume = 0.99999997764825821
+
 [bar.default]
 center = [ "clock", "cpu", "ram" ]
+concave_edge_corners = false
 end = [
-    "media",
-    "audio_visualizer",
+    "control-center",
+    "group:g1",
     "tray",
+    "recorder",
     "notifications",
     "clipboard",
     "network",
@@ -13,20 +19,47 @@ end = [
     "battery",
     "session"
 ]
-margin_edge = 0
+margin_edge = 3
 margin_ends = 0
-radius = 0
+radius = 20
 start = [ "launcher", "mpvpaper", "wallhaven", "wallpaper", "workspaces", "active_window" ]
 
+    [[bar.default.capsule_group]]
+    enabled = true
+    fill = "surface_variant"
+    id = "g1"
+    members = [ "media", "audio_visualizer" ]
+    opacity = 1.0
+    padding = 6.0
+
 [dock]
+background_opacity = 0.99999997764825821
+concave_edge_corners = false
 cross_axis_padding = 0
-icon_size = 24
+enabled = true
+icon_size = 48
 item_spacing = 0
+launcher_custom_image_colorize = true
 launcher_position = "start"
-main_axis_padding = 24
-margin_edge = 0
-radius = 3
+main_axis_padding = 15
+margin_edge = 10
+pinned = [
+    "kitty",
+    "thunar",
+    "zen",
+    "steam",
+    "vesktop",
+    "heroic",
+    "com.obsproject.Studio",
+    "prism_launcher",
+    "spotify",
+    "org.videolan.VLC",
+    "trash"
+]
+radius = 24
 reserve_space = false
+show_dots = true
+smart_auto_hide = true
 
 [hot_corners.top_left]
 action = "launcher"
@@ -35,8 +68,9 @@ action = "launcher"
 auto_locate = true
 
 [lockscreen]
-blur_intensity = 0.22999999485909939
-wallpaper = "/home/mscott/Documents/StaticWallpapers/Pomni3.jpg"
+blur_intensity = 0.33999999240040779
+tint_intensity = 0.42999999038875103
+wallpaper = "~/.local/share/backgrounds/linuxmintarch.png"
 
 [lockscreen_widgets]
 enabled = true
@@ -58,7 +92,7 @@ widget_order = [
     box_height = 70.0
     box_width = 400.0
     cx = 960.0
-    cy = 961.0
+    cy = 540.0
     output = "HDMI-A-1"
     rotation = 0.0
     type = "login_box"
@@ -67,6 +101,7 @@ widget_order = [
         background_color = "surface_variant"
         background_opacity = 0.88
         background_radius = 12.0
+        center_password_text = false
         input_opacity = 1.0
         input_radius = 6.0
         show_caps_lock = true
@@ -87,6 +122,7 @@ widget_order = [
         background_color = "surface_variant"
         background_opacity = 0.88
         background_radius = 12.0
+        center_password_text = false
         input_opacity = 1.0
         input_radius = 6.0
         show_caps_lock = true
@@ -98,7 +134,7 @@ widget_order = [
     box_height = 0.0
     box_width = 0.0
     cx = 960.0
-    cy = 860.0
+    cy = 86.0
     output = "HDMI-A-1"
     rotation = 0.0
     type = "clock"
@@ -126,39 +162,60 @@ widget_order = [
         show_when_idle = true
 
 [plugin_settings."noctalia/mpvpaper"]
-video_directory = "~/Documents/AnimatedWallpapers"
+video_directory = "~/Documents/backgrounds"
 
 [plugins]
-enabled = [ "noctalia/mpvpaper", "noctalia/kaomoji", "noctalia/wallhaven" ]
+enabled = [
+    "noctalia/kaomoji",
+    "noctalia/screen_recorder",
+    "noctalia/mpvpaper",
+    "noctalia/wallhaven",
+    "radimous/prismlauncher-instances"
+]
 
 [shell]
 external_ip_enabled = true
+font_family = "MesloLGLDZ Nerd Font"
 password_style = "random"
 polkit_agent = true
 settings_show_advanced = true
 
     [shell.launcher]
     app_grid = true
+    sort_by_usage = false
 
     [shell.panel]
-    launcher_position = "auto"
+    launcher_position = "center"
 
     [shell.screen_corners]
     size = 31
 
 [theme]
-builtin = "Tokyo-Night"
+builtin = "Eldritch"
 community_palette = "Breeze"
 mode = "dark"
 source = "community"
-wallpaper_scheme = "dysfunctional"
+wallpaper_scheme = "muted"
 
     [theme.templates]
-    builtin_ids = [ "btop", "gtk3", "gtk4", "hyprland", "kcolorscheme", "kitty", "qt" ]
-    community_ids = [ "discord", "papirus-icons", "steam" ]
+    builtin_ids = [ "alacritty", "btop", "gtk3", "gtk4", "hyprland", "kcolorscheme", "kitty", "qt" ]
+    community_ids = [
+        "spicetify",
+        "pywalfox",
+        "zen-browser",
+        "zed",
+        "rofi",
+        "discord",
+        "heroiclauncher",
+        "obs",
+        "opencode",
+        "papirus-icons",
+        "prismlauncher",
+        "steam"
+    ]
 
 [wallpaper]
-directory = "/home/mscott/Documents/StaticWallpapers"
+directory = "~/.local/share/backgrounds"
 transition = [ "wipe" ]
 transition_on_startup = true
 
@@ -168,23 +225,35 @@ transition_on_startup = true
     order = "alphabetical"
 
     [wallpaper.default]
-    path = "/home/mscott/Documents/StaticWallpapers/gimme-your-cutest-pomni-pics-v0-s0pvjqj7izlf1.png"
+    path = "/home/mscott/.local/share/backgrounds/linuxmintarch.png"
 
     [wallpaper.last]
-    path = "/home/mscott/Documents/StaticWallpapers/Charlie.png"
+    path = "/home/mscott/.local/share/backgrounds/linuxmintarch.png"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/mscott/Documents/StaticWallpapers/do-you-still-think-pomni-is-cute-adorable-after-6-episodes-v0-i9499una0ykf1.png"
+    path = "/home/mscott/.local/share/backgrounds/linuxmintarch.png"
 
     [wallpaper.monitors.HDMI-A-2]
-    path = "/home/mscott/Documents/StaticWallpapers/Charlie.png"
+    path = "/home/mscott/Documents/StaticWallpapers/gimme-your-cutest-pomni-pics-v0-s0pvjqj7izlf1.png"
+
+    [[wallpaper.favorite]]
+    path = "/home/mscott/.local/share/backgrounds/Pomni1.jpg"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    community_palette = "Osaka jade"
+    palette_source = "community"
+    path = "/home/mscott/.local/share/backgrounds/linuxmintarch.png"
+    theme_mode = "dark"
 
 [widget.clock]
 enabled = true
 format = "{:%a} {:%d.%m.%Y} {:%-I:%M %p}"
 
 [widget.control-center]
+custom_image = "/usr/share/noctalia/assets/images/distros/arch.svg"
 enabled = true
+glyph = "brand-apple-filled"
 
 [widget.date]
 enabled = true
@@ -197,6 +266,9 @@ type = "noctalia/mpvpaper:mpvpaper"
 
 [widget.network]
 enabled = true
+
+[widget.recorder]
+type = "noctalia/screen_recorder:recorder"
 
 [widget.session]
 enabled = true
