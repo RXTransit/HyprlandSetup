@@ -2,17 +2,17 @@
 
 hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
 hl.env("TERMINAL", "kitty")
-hl.env("GTK_CSD", "0")
-hl.env("XCURSOR_THEME", "MacOS-Tahoe-Cursor")
+hl.env("GTK_CSD", "1")
+hl.env("XCURSOR_THEME", "Bibata-Modern-Classic")
 hl.env("XCURSOR_SIZE", "24")
-hl.env("HYPRCURSOR_THEME", "MacOS-Tahoe-Cursor")
+hl.env("HYPRCURSOR_THEME", "Bibata-Modern-Classic")
 hl.env("HYPRCURSOR_SIZE", "24")
 
 local mainMod = "SUPER"
 local terminal = "kitty"
-local fileManager = "nemo"
+local fileManager = "thunar"
 local menu = "noctalia msg panel-toggle launcher"
-local browser = "google-chrome-stable"
+local browser = "zen-browser"
 
 -- Applications and window actions
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
@@ -26,8 +26,8 @@ hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({mode = "fullscreen", action
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser .. " --new-window"))
 hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("hyprpicker -a -n"))
 hl.bind(mainMod .. " + X", hl.dsp.window.float({ action = "toggle" }))
-hl.bind("F12", hl.dsp.exec_cmd("noctalia msg power-cycle"),{locked = true,})
-hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("noctalia msg panel-open clipboard"))
+hl.bind("Menu", hl.dsp.exec_cmd("noctalia msg power-cycle"),{locked = true,})
+hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("noctalia msg panel-toggle clipboard"))
 -- Media controls
 hl.bind("XF86AudioStop", hl.dsp.exec_cmd("noctalia msg media stop"),{locked = true, repeating = false,})
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("noctalia msg media previous"),{locked = true, repeating = false,})
@@ -68,3 +68,4 @@ hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("noctalia msg volume-down 5"),{l
 hl.bind("XF86AudioMute",hl.dsp.exec_cmd("noctalia msg volume-mute"),{locked = true,})
 -- Lock Screen
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("noctalia msg session lock"))
+--hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock -c ~/config/hypr/hyprlock.lua"))
