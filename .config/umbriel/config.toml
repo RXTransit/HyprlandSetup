@@ -1,6 +1,9 @@
 # Umbriel Configuration
 # Migrated from Hyprland Lua configuration
 
+# Import keybinds module
+include = "keybinds.toml"
+
 [general]
 gaps_in = 4
 gaps_out = 4
