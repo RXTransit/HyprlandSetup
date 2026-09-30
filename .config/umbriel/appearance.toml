@@ -62,3 +62,9 @@ enabled = true
 speed = 4
 bezier = "easeOutCubic"
 style = "popin"
+
+[misc]
+vrr = 2
+force_default_wallpaper = 0
+disable_splash_rendering = true
+enable_swallow = true
