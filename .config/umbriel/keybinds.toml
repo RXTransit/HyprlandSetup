@@ -1,0 +1,280 @@
+# Umbriel Keybinds Configuration
+# Migrated from Hyprland keybinds.lua
+
+[keybinds]
+mainMod = "Super"
+terminal = "kitty"
+fileManager = "thunar"
+menu = "noctalia msg panel-toggle launcher"
+browser = "zen-browser"
+
+# Applications and window actions
+[[keybinds.binds]]
+key = "Super + Q"
+action = "exec"
+command = "kitty"
+
+[[keybinds.binds]]
+key = "Super + C"
+action = "window"
+subaction = "close"
+
+[[keybinds.binds]]
+key = "Super + Mouse1"
+action = "window"
+subaction = "drag"
+
+[[keybinds.binds]]
+key = "Super + Mouse2"
+action = "window"
+subaction = "resize"
+
+[[keybinds.binds]]
+key = "Super + M"
+action = "exec"
+command = "noctalia msg panel-toggle session"
+
+[[keybinds.binds]]
+key = "Super + E"
+action = "exec"
+command = "thunar"
+
+[[keybinds.binds]]
+key = "Super + R"
+action = "exec"
+command = "noctalia msg panel-toggle launcher"
+
+[[keybinds.binds]]
+key = "Super + F"
+action = "window"
+subaction = "fullscreen"
+
+[[keybinds.binds]]
+key = "Super + B"
+action = "exec"
+command = "zen-browser --new-window"
+
+[[keybinds.binds]]
+key = "Super + P"
+action = "exec"
+command = "hyprpicker -a -n"
+
+[[keybinds.binds]]
+key = "Super + X"
+action = "window"
+subaction = "float"
+
+[[keybinds.binds]]
+key = "Menu"
+action = "exec"
+command = "noctalia msg power-cycle"
+locked = true
+
+[[keybinds.binds]]
+key = "Super + V"
+action = "exec"
+command = "noctalia msg panel-toggle clipboard"
+
+# Media controls
+[[keybinds.binds]]
+key = "XF86AudioStop"
+action = "exec"
+command = "noctalia msg media stop"
+locked = true
+repeating = false
+
+[[keybinds.binds]]
+key = "XF86AudioPrev"
+action = "exec"
+command = "noctalia msg media previous"
+locked = true
+repeating = false
+
+[[keybinds.binds]]
+key = "XF86AudioPlay"
+action = "exec"
+command = "noctalia msg media toggle"
+locked = true
+repeating = false
+
+[[keybinds.binds]]
+key = "XF86AudioNext"
+action = "exec"
+command = "noctalia msg media next"
+locked = true
+repeating = false
+
+# Workspace switching (Super + 1-9, 0 for 10)
+[[keybinds.binds]]
+key = "Super + 1"
+action = "workspace"
+workspace = 1
+
+[[keybinds.binds]]
+key = "Super + 2"
+action = "workspace"
+workspace = 2
+
+[[keybinds.binds]]
+key = "Super + 3"
+action = "workspace"
+workspace = 3
+
+[[keybinds.binds]]
+key = "Super + 4"
+action = "workspace"
+workspace = 4
+
+[[keybinds.binds]]
+key = "Super + 5"
+action = "workspace"
+workspace = 5
+
+[[keybinds.binds]]
+key = "Super + 6"
+action = "workspace"
+workspace = 6
+
+[[keybinds.binds]]
+key = "Super + 7"
+action = "workspace"
+workspace = 7
+
+[[keybinds.binds]]
+key = "Super + 8"
+action = "workspace"
+workspace = 8
+
+[[keybinds.binds]]
+key = "Super + 9"
+action = "workspace"
+workspace = 9
+
+[[keybinds.binds]]
+key = "Super + 0"
+action = "workspace"
+workspace = 10
+
+# Move windows to workspaces (Super + Shift + 1-9, 0 for 10)
+[[keybinds.binds]]
+key = "Super + Shift + 1"
+action = "window"
+subaction = "move-to-workspace"
+workspace = 1
+
+[[keybinds.binds]]
+key = "Super + Shift + 2"
+action = "window"
+subaction = "move-to-workspace"
+workspace = 2
+
+[[keybinds.binds]]
+key = "Super + Shift + 3"
+action = "window"
+subaction = "move-to-workspace"
+workspace = 3
+
+[[keybinds.binds]]
+key = "Super + Shift + 4"
+action = "window"
+subaction = "move-to-workspace"
+workspace = 4
+
+[[keybinds.binds]]
+key = "Super + Shift + 5"
+action = "window"
+subaction = "move-to-workspace"
+workspace = 5
+
+[[keybinds.binds]]
+key = "Super + Shift + 6"
+action = "window"
+subaction = "move-to-workspace"
+workspace = 6
+
+[[keybinds.binds]]
+key = "Super + Shift + 7"
+action = "window"
+subaction = "move-to-workspace"
+workspace = 7
+
+[[keybinds.binds]]
+key = "Super + Shift + 8"
+action = "window"
+subaction = "move-to-workspace"
+workspace = 8
+
+[[keybinds.binds]]
+key = "Super + Shift + 9"
+action = "window"
+subaction = "move-to-workspace"
+workspace = 9
+
+[[keybinds.binds]]
+key = "Super + Shift + 0"
+action = "window"
+subaction = "move-to-workspace"
+workspace = 10
+
+# Move windows in the tiling layout
+[[keybinds.binds]]
+key = "Super + Left"
+action = "window"
+subaction = "move"
+direction = "left"
+
+[[keybinds.binds]]
+key = "Super + Down"
+action = "window"
+subaction = "move"
+direction = "down"
+
+[[keybinds.binds]]
+key = "Super + Up"
+action = "window"
+subaction = "move"
+direction = "up"
+
+[[keybinds.binds]]
+key = "Super + Right"
+action = "window"
+subaction = "move"
+direction = "right"
+
+# Screenshots
+[[keybinds.binds]]
+key = "Print"
+action = "exec"
+command = "noctalia msg screenshot-region"
+
+[[keybinds.binds]]
+key = "Shift + Print"
+action = "exec"
+command = "noctalia msg screenshot-fullscreen pick"
+
+# Volume controls
+[[keybinds.binds]]
+key = "XF86AudioRaiseVolume"
+action = "exec"
+command = "noctalia msg volume-up 5"
+locked = true
+repeating = true
+
+[[keybinds.binds]]
+key = "XF86AudioLowerVolume"
+action = "exec"
+command = "noctalia msg volume-down 5"
+locked = true
+repeating = true
+
+[[keybinds.binds]]
+key = "XF86AudioMute"
+action = "exec"
+command = "noctalia msg volume-mute"
+locked = true
+
+# Lock screen
+[[keybinds.binds]]
+key = "Super + L"
+action = "exec"
+command = "noctalia msg session lock"
