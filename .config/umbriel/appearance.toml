@@ -1,0 +1,70 @@
+# Umbriel Appearance Configuration
+# Migrated from Hyprland appearance.lua and noctalia.lua
+
+[colors]
+active_border = "rgb(7aa2f7)"
+inactive_border = "rgb(24283b)"
+
+[colors.group]
+border_active = "rgb(bb9af7)"
+border_inactive = "rgb(24283b)"
+border_locked_active = "rgb(f7768e)"
+border_locked_inactive = "rgb(24283b)"
+
+[colors.group.groupbar]
+gradients = true
+active = "rgb(bb9af7)"
+inactive = "rgb(24283b)"
+locked_active = "rgb(f7768e)"
+locked_inactive = "rgb(24283b)"
+text_color = "rgb(1a1b26)"
+text_color_inactive = "rgb(c0caf5)"
+text_color_locked_active = "rgb(1a1b26)"
+text_color_locked_inactive = "rgb(c0caf5)"
+
+[decoration]
+rounding = 25
+rounding_power = 3
+
+[decoration.shadow]
+enabled = true
+range = 4
+render_power = 3
+color = "rgba(1a1a1aee)"
+
+[decoration.blur]
+enabled = true
+size = 3
+passes = 2
+vibrancy = 0.1696
+
+[animations]
+enabled = true
+
+[animations.easeOutCubic]
+type = "bezier"
+points = [[0.25, 0.46], [0.45, 0.94]]
+
+[animations.workspaces]
+enabled = true
+speed = 2
+bezier = "easeOutCubic"
+style = "fade"
+
+[animations.windowsIn]
+enabled = true
+speed = 4
+bezier = "easeOutCubic"
+style = "popin"
+
+[animations.windowsOut]
+enabled = true
+speed = 4
+bezier = "easeOutCubic"
+style = "popin"
+
+[misc]
+vrr = 2
+force_default_wallpaper = 0
+disable_splash_rendering = true
+enable_swallow = true
