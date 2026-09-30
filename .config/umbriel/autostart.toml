@@ -1,0 +1,11 @@
+# Umbriel Autostart Configuration
+# Migrated from Hyprland autostart.lua
+
+[autostart]
+commands = [
+    "uwsm app -- openrgb --profile RGB",
+    "uwsm app -- noctalia",
+    "wl-paste --type text --watch cliphist store",
+    "wl-paste --type image --watch cliphist store",
+    "uwsm app -- protonvpn-app"
+]
