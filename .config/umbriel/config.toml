@@ -1,0 +1,30 @@
+# Main Umbriel configuration
+
+[include]
+files = [
+    "appearance.toml",
+    "monitors.toml",
+    "keybinds.toml",
+    "windowrules.toml",
+    "/usr/share/umbriel/effects/animation/workspace_wipe/effect.toml"
+]
+[include.optional]
+files = [
+  "noctalia.toml",
+]
+[general]
+mod_key = "Super"
+autostart = [
+    "systemctl --user start xdg-desktop-portal",
+    "systemctl --user start xdg-desktop-portal-gtk",
+    "noctalia",
+    "wl-paste --type text --watch cliphist store",
+    "wl-paste --type image --watch cliphist store",
+    "openrgb --profile 'RGB'",
+    "shelly"
+]
+xwayland = true
+show_cheatsheet = true
+
+[environment]
+QT_QPA_PLATFORMTHEME = "qt6ct"

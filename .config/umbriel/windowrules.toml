@@ -1,0 +1,23 @@
+# Window Rules
+[[window_rule]]
+match.app_id = "^(trucky|trucky-electron)$"
+default_floating = true
+blur = false
+
+[[window_rule]]
+match.title = "Trucky - Game Info"
+default_floating = true
+blur = false
+border_width = 0
+
+[[window_rule]]
+match.app_id = "io.github.lawstorant.boxflat"
+default_workspace = "10"
+
+[[window_rule]]
+match.app_id = "steam"
+default_workspace = "3"
+
+[[window_rule]]
+match.app_id = "vesktop"
+default_workspace = "2"

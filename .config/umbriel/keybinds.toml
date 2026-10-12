@@ -1,0 +1,71 @@
+[keybinds]
+"Mod+Q" = "spawn:kitty"
+"Mod+C" = "window-close"
+"Mod+M" = "spawn:noctalia msg panel-toggle session"
+"Mod+E" = "spawn:thunar"
+"Mod+R" = "spawn:noctalia msg panel-toggle launcher"
+"Mod+F" = "window-toggle-fullscreen"
+"Mod+B" = "spawn:zen-browser --new-window"
+"Mod+P" = "spawn:hyprpicker -a -n"
+"Mod+X" = "window-toggle-floating"
+"Menu" = { action = "spawn:noctalia msg power-cycle", allow_when_locked = true }
+"Mod+V" = "spawn:noctalia msg panel-toggle clipboard"
+
+# Media Controls
+"XF86AudioStop" = { action = "spawn:noctalia msg media stop", allow_when_locked = true, repeat = false }
+"XF86AudioPrev" = { action = "spawn:noctalia msg media previous", allow_when_locked = true, repeat = false }
+"XF86AudioPlay" = { action = "spawn:noctalia msg media toggle", allow_when_locked = true, repeat = false }
+"XF86AudioNext" = { action = "spawn:noctalia msg media next", allow_when_locked = true, repeat = false }
+"Alt+Tab" = "spawn:noctalia msg window-switcher hold"
+
+# Workspaces Navigation & Moving
+"Mod+1" = "workspace-switch:1"
+"Mod+2" = "workspace-switch:2"
+"Mod+3" = "workspace-switch:3"
+"Mod+4" = "workspace-switch:4"
+"Mod+5" = "workspace-switch:5"
+"Mod+6" = "workspace-switch:6"
+"Mod+7" = "workspace-switch:7"
+"Mod+8" = "workspace-switch:8"
+"Mod+9" = "workspace-switch:9"
+"Mod+0" = "workspace-switch:10"
+
+"Mod+Shift+1" = "window-move-to-workspace:1"
+"Mod+Shift+2" = "window-move-to-workspace:2"
+"Mod+Shift+3" = "window-move-to-workspace:3"
+"Mod+Shift+4" = "window-move-to-workspace:4"
+"Mod+Shift+5" = "window-move-to-workspace:5"
+"Mod+Shift+6" = "window-move-to-workspace:6"
+"Mod+Shift+7" = "window-move-to-workspace:7"
+"Mod+Shift+8" = "window-move-to-workspace:8"
+"Mod+Shift+9" = "window-move-to-workspace:9"
+"Mod+Shift+0" = "window-move-to-workspace:10"
+
+# Tiling layout movement
+"Mod+Left" = "window-move-left"
+"Mod+Down" = "window-move-down"
+"Mod+Up" = "window-move-up"
+"Mod+Right" = "window-move-right"
+
+# Screenshots
+"Print" = "spawn:noctalia msg screenshot-region"
+"Shift+Print" = "spawn:noctalia msg screenshot-fullscreen pick"
+
+# Volume controls
+"XF86AudioRaiseVolume" = { action = "spawn:noctalia msg volume-up 5", allow_when_locked = true, repeat = true }
+"XF86AudioLowerVolume" = { action = "spawn:noctalia msg volume-down 5", allow_when_locked = true, repeat = true }
+"XF86AudioMute" = { action = "spawn:noctalia msg volume-mute", allow_when_locked = true }
+
+# Lock Screen
+"Mod+L" = "spawn:noctalia msg session lock"
+
+[input.cursor]
+theme = ""
+size = 24
+hardware_cursor = true
+follows_focus = false
+hide_when_typing = true
+hide_timeout_ms = 0
+[input.focus]
+follows_mouse = true
+follows_mouse_max_scroll = 0.5

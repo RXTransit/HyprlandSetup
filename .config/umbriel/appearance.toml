@@ -1,0 +1,68 @@
+[layout]
+gap = 2
+mode = "dwindle"
+
+
+[appearance]
+corner_radius = 0
+border_width = 1
+prefer_no_csd = true
+
+[appearance.blur]
+enabled = true
+optimized = true
+passes = 2
+saturation = 1.1
+
+[animation]
+enabled = true
+duration_ms = 250
+curve = "easeout"
+
+[animation.windows_in]
+enabled = true
+curve = "spring:1,900"
+style = "popin"
+scale = 0.5
+
+[animation.windows_out]
+enabled = true
+curve = "spring:1,1400"
+style = "popin"
+scale = 0.8
+
+[animation.windows_move]
+enabled = true
+curve = "spring:1,900"
+
+[animation.workspaces]
+style = "slide"
+effect = "workspace_wipe"
+enabled = true
+duration_ms = 300
+curve = "easeout"
+
+[animation.overview]
+enabled = true
+curve = "spring:1,800"
+workspace_curve = "spring:1,1000"
+
+[animation.scratchpad]
+enabled = true
+curve = "spring:1,800"
+dim = 0.8
+blur = false
+scale = 0.0
+maximize = false
+fullscreen = false
+
+[animation.border]
+enabled = true
+curve = "spring:1,900"
+
+[animation.dim_unfocused]
+enabled = false
+dim = 0.0
+
+[animation.layers]
+enabled = false
