@@ -35,7 +35,7 @@ Noctalia Greeter + Greetd
 
 ## Audio
 
-If audio icons don't appear in waybar, install `pipewire`, `pipewire-pulse`, and `wireplumber`, then run:
+If audio no worky, install `pipewire`, `pipewire-pulse`, and `wireplumber`, then run:
 
 ```bash
 systemctl --user restart pipewire pipewire-pulse wireplumber
