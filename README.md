@@ -1,8 +1,8 @@
-# Hyprland Setup
+# Umbriel Setup
 
-![Hyprland Setup](image.png)
+![Umbriel Setup](images/image.png)
 
-My personal Hyprland dotfiles and configuration for Arch Linux. Migrated to LUA programming language
+My personal Umbriel dotfiles and configuration for Arch Linux.
 ## Installation Script
 ```
 ##Packages 
@@ -24,17 +24,14 @@ Noctalia has a built in wallpaper plugin
 that's what I used lol
 
 ## Configuration
-
-- Edit ~/.config/hypr/workspaces.lua and ~/.config/hypr/monitors.lua to match your monitor names.
-- Remove autostart entries for programs you don't use in ~/,config/hypr/autostart.lua
+all the configuration will be in ~/.config/umbriel/config.toml
+afterwards run umbriel config validate
 
 ## Animated Wallpapers
 Video wallpapers set by Noctalia require mpvpaper 
 
 ## Display Manager
-
-Works best with **SDDM** login manager.
-Included is the SDDM Silent Gruvbox Theme
+Noctalia Greeter + Greetd
 
 ## Audio
 
@@ -49,20 +46,8 @@ systemctl --user restart pipewire pipewire-pulse wireplumber
 - Tested on Arch Linux btw.
 - Works well in `uwsm` managed session.
 
-To set kitty as default terminal in nemo when opening directorys in terminal, go to thunar, click edit>configure custom actions>double click on Open Terminal Here> put in kitty %f as the command
+To set kitty as default terminal in thunar when opening directorys in terminal, go to thunar, click edit>configure custom actions>double click on Open Terminal Here> put in kitty %f as the command
 Like wise you can set thunar  as default file manager as well
 ```
 xdg-mime default thunar.desktop inode/directory application/x-gnome-saved-search
 ```
-
-##PS
-
-If anyone could figure out how to transfer this to NixOs, much appreciated!
-
-My Hyprland dotfiles have now been split for more ease of use 
-
-This is arch only now
-
-non-arch users can figure out instructions for their own distros
-
-
